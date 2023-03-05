@@ -1,0 +1,272 @@
+QR initmove()
+setBusServoPulse(1, 450, 300)
+setBusServoPulse(2, 500, 500)
+(0, 10, 10)
+getBusServoPulse(1)
+451
+servos(139, 934, 795, 500)
+getBusServoPulse(3)
+135
+Servo3-abs=4
+getBusServoPulse(4)
+937
+Servo4-abs=3
+getBusServoPulse(5)
+796
+Servo5-abs=1
+getBusServoPulse(6)
+None
+498
+Servo6-abs=2
+newmovetime=16,movetime=1500
+setBusServoPulse(3, 139, 66)
+setBusServoPulse(4, 934, 66)
+setBusServoPulse(5, 795, 66)
+setBusServoPulse(6, 500, 66)
+预计运行时间1500ms,实际运行时间66ms
+func main() started
+func QRcode_sort() started
+QRSorting Start
+detect_block=None
+green
+move to world_X=-1and world_Y=17
+(-1.0, 17.95, 7)
+getBusServoPulse(1)
+451
+servos(61, 619, 404, 513)
+getBusServoPulse(3)
+None
+135
+Servo3-abs=74
+getBusServoPulse(4)
+937
+Servo4-abs=318
+getBusServoPulse(5)
+None
+796
+Servo5-abs=392
+getBusServoPulse(6)
+498
+Servo6-abs=15
+newmovetime=1568,movetime=500
+setBusServoPulse(3, 61, 500)
+setBusServoPulse(4, 619, 500)
+setBusServoPulse(5, 404, 500)
+setBusServoPulse(6, 513, 500)
+预计运行时间500ms,实际运行时间500ms
+setBusServoPulse(2, 516, 500)
+(-1.0, 17.95, 5)
+getBusServoPulse(1)
+None
+451
+servos(64, 622, 379, 513)
+getBusServoPulse(3)
+63
+Servo3-abs=1
+getBusServoPulse(4)
+626
+Servo4-abs=4
+getBusServoPulse(5)
+397
+Servo5-abs=18
+getBusServoPulse(6)
+None
+510
+Servo6-abs=3
+newmovetime=72,movetime=300
+setBusServoPulse(3, 64, 122)
+setBusServoPulse(4, 622, 122)
+setBusServoPulse(5, 379, 122)
+setBusServoPulse(6, 513, 122)
+预计运行时间300ms,实际运行时间122ms
+setBusServoPulse(1, 220, 300)
+(-1.0, 17.95, 1.5)
+getBusServoPulse(1)
+259
+servos(75, 623, 331, 513)
+getBusServoPulse(3)
+None
+63
+Servo3-abs=12
+getBusServoPulse(4)
+None
+626
+Servo4-abs=3
+getBusServoPulse(5)
+374
+Servo5-abs=43
+getBusServoPulse(6)
+510
+Servo6-abs=3
+newmovetime=172,movetime=300
+setBusServoPulse(3, 75, 222)
+setBusServoPulse(4, 623, 222)
+setBusServoPulse(5, 331, 222)
+setBusServoPulse(6, 513, 222)
+预计运行时间300ms,实际运行时间222ms
+setBusServoPulse(1, 500, 300)
+setBusServoPulse(2, 500, 300)
+(-1.0, 17.95, 9)
+getBusServoPulse(1)
+434
+servos(68, 627, 434, 513)
+getBusServoPulse(3)
+74
+Servo3-abs=6
+getBusServoPulse(4)
+None
+None
+None
+626
+Servo4-abs=1
+getBusServoPulse(5)
+None
+325
+Servo5-abs=109
+getBusServoPulse(6)
+None
+510
+Servo6-abs=3
+newmovetime=436,movetime=400
+setBusServoPulse(3, 68, 400)
+setBusServoPulse(4, 627, 400)
+setBusServoPulse(5, 434, 400)
+setBusServoPulse(6, 513, 400)
+预计运行时间400ms,实际运行时间400ms
+getBusServoPulse(1)
+436
+servo1_now=436
+(0, 10, 12)
+getBusServoPulse(1)
+None
+436
+servos(64, 786, 672, 500)
+getBusServoPulse(3)
+70
+Servo3-abs=6
+getBusServoPulse(4)
+None
+None
+626
+Servo4-abs=160
+getBusServoPulse(5)
+423
+Servo5-abs=249
+getBusServoPulse(6)
+510
+Servo6-abs=10
+newmovetime=996,movetime=400
+setBusServoPulse(3, 64, 400)
+setBusServoPulse(4, 786, 400)
+setBusServoPulse(5, 672, 400)
+setBusServoPulse(6, 500, 400)
+预计运行时间400ms,实际运行时间400ms
+机械臂抬起
+机械臂开始放下 detect_block=green
+green
+(-14.5, -0.5, 12)
+getBusServoPulse(1)
+None
+436
+servos(67, 693, 542, 883)
+getBusServoPulse(3)
+None
+None
+None
+66
+Servo3-abs=1
+getBusServoPulse(4)
+788
+Servo4-abs=95
+getBusServoPulse(5)
+674
+Servo5-abs=132
+getBusServoPulse(6)
+504
+Servo6-abs=379
+newmovetime=1516,movetime=400
+setBusServoPulse(3, 67, 400)
+setBusServoPulse(4, 693, 400)
+setBusServoPulse(5, 542, 400)
+setBusServoPulse(6, 883, 400)
+预计运行时间400ms,实际运行时间400ms
+({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 400)
+(-14.5, -0.5, 2)
+getBusServoPulse(1)
+436
+servos(68, 696, 386, 883)
+getBusServoPulse(3)
+64
+Servo3-abs=4
+getBusServoPulse(4)
+707
+Servo4-abs=11
+getBusServoPulse(5)
+543
+Servo5-abs=157
+getBusServoPulse(6)
+None
+858
+Servo6-abs=25
+newmovetime=628,movetime=400
+setBusServoPulse(3, 68, 400)
+setBusServoPulse(4, 696, 400)
+setBusServoPulse(5, 386, 400)
+setBusServoPulse(6, 883, 400)
+预计运行时间400ms,实际运行时间400ms
+({'servo3': 68, 'servo4': 696, 'servo5': 386, 'servo6': 883}, -88, 400)
+setBusServoPulse(2, 508, 300)
+setBusServoPulse(1, 300, 300)
+num green=1
+(-14.5, -0.5, 12)
+getBusServoPulse(1)
+None
+328
+servos(67, 693, 542, 883)
+getBusServoPulse(3)
+66
+Servo3-abs=1
+getBusServoPulse(4)
+701
+Servo4-abs=8
+getBusServoPulse(5)
+381
+Servo5-abs=161
+getBusServoPulse(6)
+None
+None
+884
+Servo6-abs=1
+newmovetime=644,movetime=500
+setBusServoPulse(3, 67, 500)
+setBusServoPulse(4, 693, 500)
+setBusServoPulse(5, 542, 500)
+setBusServoPulse(6, 883, 500)
+预计运行时间500ms,实际运行时间500ms
+QR initmove()
+setBusServoPulse(1, 450, 300)
+setBusServoPulse(2, 500, 500)
+(0, 10, 10)
+getBusServoPulse(1)
+299
+servos(139, 934, 795, 500)
+getBusServoPulse(3)
+66
+Servo3-abs=73
+getBusServoPulse(4)
+699
+Servo4-abs=235
+getBusServoPulse(5)
+537
+Servo5-abs=258
+getBusServoPulse(6)
+884
+Servo6-abs=384
+newmovetime=1536,movetime=1500
+setBusServoPulse(3, 139, 1500)
+setBusServoPulse(4, 934, 1500)
+setBusServoPulse(5, 795, 1500)
+setBusServoPulse(6, 500, 1500)
+No barcode found.
+No barcode found.
+预计运行时间1500ms,实际运行时间1500ms
