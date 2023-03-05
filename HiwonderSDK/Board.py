@@ -165,7 +165,7 @@ def setBusServoPulse(id, pulse, use_time):
     :pulse: 位置
     :use_time: 转动需要的时间
     """
-    print(f'setBusServoPulse({id}, {pulse}, {use_time})')
+    # print(f'setBusServoPulse({id}, {pulse}, {use_time})')
     if(use_time>500):
         use_time=500
 
@@ -293,11 +293,11 @@ def getBusServoPulse(id):
     :param id:
     :return:
     '''
-    print(f'getBusServoPulse({id})')
+    # print(f'getBusServoPulse({id})')
     while True:
         serial_servo_read_cmd(id, LOBOT_SERVO_POS_READ)
         msg = serial_servo_get_rmsg(LOBOT_SERVO_POS_READ)
-        print(msg)
+        # print(msg)
         if msg is not None:
             return msg
         

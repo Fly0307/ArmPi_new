@@ -186,10 +186,12 @@ def move():
 
     while True:
         if __isRunning:
+            startTime=0
             print("detect_block=%s" %(detect_block))
             get_it=False
             count_num=0
             while not get_it:
+                startTime=time.perf_counter()
                 if detect_block != 'None' and start_pick_up:  
                     # 如果抓取2次后还未抓取成功，则清空识别记录重新识别
                     if count_num>1:
@@ -212,13 +214,12 @@ def move():
                         unreachable = True
                     else:
                         unreachable = False
-                        # time.sleep(result[2]/1000)
                         if not __isRunning:
                             continue
                         # 计算夹持器需要旋转的角度
                         servo2_angle = getAngle(world_X, world_Y, rotation_angle)
-                        Board.setBusServoPulse(2, servo2_angle, 500)  # 旋转爪子
-                        time.sleep(0.5)
+                        Board.setBusServoPulse(2, servo2_angle, 300)  # 旋转爪子
+                        time.sleep(0.3)
 
                         if not __isRunning:
                             continue
@@ -226,14 +227,12 @@ def move():
                             (world_X, world_Y, 5), -90, -90, 0,1000)  # 降低高度到4cm
                         if result == False:
                             print("can't reach")
-                        # time.sleep(result[2]/1000)
                         Board.setBusServoPulse(1, servo1 - 280, 300)  # 爪子张开
                         time.sleep(0.3)
                         if not __isRunning:
                             continue
                         result=AK.setPitchRangeMoving(
                             (world_X, world_Y, 1.5), -90, -90, 0,500)  # 降低高度到2cm
-                        # time.sleep(result[2]/1000)
 
                         if not __isRunning:
                             continue
@@ -245,9 +244,8 @@ def move():
                         Board.setBusServoPulse(2, 500, 300)
                         result=AK.setPitchRangeMoving(
                             (world_X, world_Y, 9), -90, -90, 0,1000)  # 机械臂抬起
-                        # time.sleep(result[2]/1000)
                         servo1_now=Board.getBusServoPulse(1)
-                        print("servo1_now=%d"%servo1_now)
+                        # print("servo1_now=%d"%servo1_now)
                         #未夹取成功
                         if servo1_now>= 490:
                             print("don't get it")
@@ -262,7 +260,6 @@ def move():
                             get_it=True
                         result=AK.setPitchRangeMoving(
                             (0, 10, 12), -90, -90, 0,1000)  # 机械臂抬起
-                        # time.sleep(result[2]/1000)
 
                         pick_up=True
                         start_pick_up=False
@@ -284,7 +281,6 @@ def move():
                     result=AK.setPitchRangeMoving(
                         (coordinate[detect_block][0], coordinate[detect_block][1], 12), -90, -90, 0,1000)
                     print(result)
-                    # time.sleep(result[2]/1000)
 
                     if not __isRunning:
                         continue
@@ -315,7 +311,6 @@ def move():
                         continue
                     result=AK.setPitchRangeMoving(
                         (coordinate[detect_block][0], coordinate[detect_block][1], 12), -90, -90, 0,500)
-                    time.sleep(result[2]/1000)
                     detect_block = 'None'
                     get_roi = False
                     start_pick_up = False
@@ -323,19 +318,18 @@ def move():
                     text='null'
                     set_rgb(detect_block)
                     initMove()  # 回到初始位置
-                    time.sleep(1.5)
                 else:
                     put_it=False
                     if _stop:
                         _stop = False
                         Board.setBusServoPulse(1, servo1 - 70, 300)
-                        time.sleep(0.5)
+                        time.sleep(0.3)
                         Board.setBusServoPulse(2, 500, 500)
                         AK.setPitchRangeMoving((0, 10, 10), -30, -30, -90, 1500)
-                        time.sleep(1.5)
                         # initMove()
-                        time.sleep(1.5)
                     time.sleep(0.01)
+                endTime=time.perf_counter()
+                print(f"开始抓取到完成用时:{(endTime-startTime)*1000}ms")
 
 
 # 运行子线程
@@ -455,6 +449,7 @@ def decodeDisplay(image):
     data = []
     box=None
     rect=None
+    startTime=time.perf_counter()
     if not barcodes:
             print('No barcode found.')
             time.sleep(1)
@@ -480,6 +475,8 @@ def decodeDisplay(image):
     (x, y, w, h) = max_barcode.rect
     barcodeData = max_barcode.data.decode("utf-8")
     data.append([x, y, w, h, barcodeData])
+    endTime=time.perf_counter()
+    print(f'识别二维码时间为:{(endTime-startTime)*1000}ms')
     return image,box,rect, data
 
 
