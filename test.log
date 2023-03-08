@@ -1,89 +1,185 @@
 QR initmove()
 (0, 10, 10)
 servos(139, 934, 795, 500)
-Servo3-abs=3
-Servo4-abs=4
-Servo5-abs=3
+Servo3-abs=4
+Servo4-abs=1
+Servo5-abs=2
 Servo6-abs=1
-预计运行时间1500ms,实际运行时间1500ms
+newmovetime=4,movetime=1500
+预计运行时间1500ms,实际运行时间24ms
 func main() started
 func QRcode_sort() started
 QRSorting Start
 detect_block=None
-识别二维码时间为:10.759363000033773ms
+识别二维码时间为:24.9662820000367ms
+识别画面所有二维码时间为:0.06531400003950694ms
+[['000000003', 305, 172], ['000000003', 146, 357], ['000000003', 296, 339], ['000000003', 466, 369], ['000000003', 472, 197], ['000000003', 160, 187]]
 green
-move to world_X=0and world_Y=19
-(0.57, 19.47, 7)
-servos(74, 602, 386, 493)
-Servo3-abs=61
-Servo4-abs=335
-Servo5-abs=413
-Servo6-abs=6
-预计运行时间1500ms,实际运行时间1500ms
-(0.57, 19.47, 5)
-servos(69, 591, 355, 493)
-Servo3-abs=6
-Servo4-abs=17
-Servo5-abs=23
-Servo6-abs=4
-预计运行时间1000ms,实际运行时间1000ms
-(0.57, 19.47, 1.5)
-servos(65, 567, 298, 493)
-Servo3-abs=6
-Servo4-abs=32
-Servo5-abs=53
+move to world_X=1and world_Y=20
+(1.71, 20.47, 7)
+servos(80, 583, 369, 480)
+Servo3-abs=55
+Servo4-abs=352
+Servo5-abs=427
+Servo6-abs=18
+newmovetime=427,movetime=1500
+预计运行时间1500ms,实际运行时间447ms
+(1.71, 20.47, 5)
+servos(65, 554, 331, 480)
+Servo3-abs=16
+Servo4-abs=36
+Servo5-abs=30
 Servo6-abs=3
-预计运行时间500ms,实际运行时间500ms
-(0.57, 19.47, 9)
-servos(74, 598, 407, 493)
+newmovetime=36,movetime=1000
+预计运行时间1000ms,实际运行时间56ms
+(1.71, 20.47, 1.5)
+servos(73, 551, 287, 480)
 Servo3-abs=7
-Servo4-abs=24
-Servo5-abs=113
-Servo6-abs=4
-预计运行时间1000ms,实际运行时间1000ms
+Servo4-abs=10
+Servo5-abs=38
+Servo6-abs=3
+newmovetime=38,movetime=500
+预计运行时间500ms,实际运行时间58ms
+(1.71, 20.47, 9)
+servos(86, 589, 395, 480)
+Servo3-abs=16
+Servo4-abs=33
+Servo5-abs=115
+Servo6-abs=0
+newmovetime=115,movetime=1000
+预计运行时间1000ms,实际运行时间135ms
 (0, 10, 12)
 servos(64, 786, 672, 500)
-Servo3-abs=5
-Servo4-abs=188
-Servo5-abs=274
-Servo6-abs=4
-预计运行时间1000ms,实际运行时间1000ms
+Servo3-abs=16
+Servo4-abs=195
+Servo5-abs=295
+Servo6-abs=18
+newmovetime=295,movetime=1000
+预计运行时间1000ms,实际运行时间315ms
 机械臂抬起
 机械臂开始放下 detect_block=green
 green
 (-14.5, -0.5, 12)
 servos(67, 693, 542, 883)
-Servo3-abs=2
-Servo4-abs=95
-Servo5-abs=133
+Servo3-abs=1
+Servo4-abs=96
+Servo5-abs=122
 Servo6-abs=386
-预计运行时间1000ms,实际运行时间1000ms
-({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 1000)
+newmovetime=386,movetime=1000
+预计运行时间1000ms,实际运行时间406ms
+({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 406)
 (-14.5, -0.5, 2)
 servos(68, 696, 386, 883)
 Servo3-abs=3
-Servo4-abs=4
-Servo5-abs=154
-Servo6-abs=1
-预计运行时间1000ms,实际运行时间1000ms
-({'servo3': 68, 'servo4': 696, 'servo5': 386, 'servo6': 883}, -88, 1000)
+Servo4-abs=9
+Servo5-abs=155
+Servo6-abs=13
+newmovetime=155,movetime=1000
+预计运行时间1000ms,实际运行时间175ms
+({'servo3': 68, 'servo4': 696, 'servo5': 386, 'servo6': 883}, -88, 175)
 num green=1
 (-14.5, -0.5, 12)
 servos(67, 693, 542, 883)
 Servo3-abs=1
-Servo4-abs=7
-Servo5-abs=161
+Servo4-abs=6
+Servo5-abs=163
 Servo6-abs=1
-预计运行时间500ms,实际运行时间500ms
+newmovetime=163,movetime=500
+预计运行时间500ms,实际运行时间183ms
 QR initmove()
 (0, 10, 10)
 servos(139, 934, 795, 500)
 Servo3-abs=73
 Servo4-abs=235
-Servo5-abs=259
-Servo6-abs=382
-No barcode found.
-No barcode found.
-预计运行时间1500ms,实际运行时间1500ms
-开始抓取到完成用时:11397.359789998518ms
-detect_block=None
+Servo5-abs=265
+Servo6-abs=384
+newmovetime=384,movetime=1500
+识别二维码时间为:0.3708300000653253ms
+识别画面所有二维码时间为:0.057795999964582734ms
+[['000000005', 146, 357], ['000000005', 295, 339], ['000000005', 472, 197], ['000000005', 415, 313], ['000000005', 160, 187]]
+预计运行时间1500ms,实际运行时间404ms
+开始抓取到完成用时:4529.749816000049ms
+detect_block=green
+green
+move to world_X=-4and world_Y=13
+(-4.88, 13.7, 7)
+servos(62, 705, 476, 582)
+Servo3-abs=69
+Servo4-abs=232
+Servo5-abs=321
+Servo6-abs=84
+newmovetime=321,movetime=1500
+预计运行时间1500ms,实际运行时间341ms
+(-4.88, 13.7, 5)
+servos(60, 699, 439, 582)
+Servo3-abs=4
+Servo4-abs=10
+Servo5-abs=29
+Servo6-abs=2
+newmovetime=29,movetime=1000
+预计运行时间1000ms,实际运行时间49ms
+(-4.88, 13.7, 1.5)
+servos(64, 686, 371, 582)
+Servo3-abs=1
+Servo4-abs=19
+Servo5-abs=63
+Servo6-abs=2
+newmovetime=63,movetime=500
+预计运行时间500ms,实际运行时间83ms
+(-4.88, 13.7, 9)
+servos(63, 702, 506, 582)
+Servo3-abs=1
+Servo4-abs=10
+Servo5-abs=142
+Servo6-abs=2
+newmovetime=142,movetime=1000
+预计运行时间1000ms,实际运行时间162ms
+(0, 10, 12)
+servos(64, 786, 672, 500)
+Servo3-abs=2
+Servo4-abs=83
+Servo5-abs=174
+Servo6-abs=80
+newmovetime=174,movetime=1000
+预计运行时间1000ms,实际运行时间194ms
+机械臂抬起
+机械臂开始放下 detect_block=green
+green
+(-14.5, -0.5, 12)
+servos(67, 693, 542, 883)
+Servo3-abs=6
+Servo4-abs=96
+Servo5-abs=135
+Servo6-abs=384
+newmovetime=384,movetime=1000
+预计运行时间1000ms,实际运行时间404ms
+({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 404)
+(-14.5, -0.5, 3)
+servos(64, 697, 404, 883)
+Servo3-abs=1
+Servo4-abs=7
+Servo5-abs=134
+Servo6-abs=9
+newmovetime=134,movetime=1000
+预计运行时间1000ms,实际运行时间154ms
+({'servo3': 64, 'servo4': 697, 'servo5': 404, 'servo6': 883}, -85, 154)
+num green=2
+(-14.5, -0.5, 12)
+servos(67, 693, 542, 883)
+Servo3-abs=2
+Servo4-abs=4
+Servo5-abs=139
+Servo6-abs=1
+newmovetime=139,movetime=500
+预计运行时间500ms,实际运行时间159ms
+QR initmove()
+(0, 10, 10)
+servos(139, 934, 795, 500)
+Servo3-abs=74
+Servo4-abs=237
+Servo5-abs=254
+Servo6-abs=384
+newmovetime=384,movetime=1500
+识别二维码时间为:0.4689219999818306ms
+识别画面所有二维码时间为:0.05577700005687802ms
+[['100000020', 296, 339], ['100000020', 472, 197], ['100000020', 415, 313], ['100000020', 161, 187]]

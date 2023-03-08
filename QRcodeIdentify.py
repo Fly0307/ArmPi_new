@@ -477,6 +477,14 @@ def decodeDisplay(image):
     data.append([x, y, w, h, barcodeData])
     endTime=time.perf_counter()
     print(f'识别二维码时间为:{(endTime-startTime)*1000}ms')
+    orderIDs=[]
+    for barcode in barcodes:
+        orderID = barcode.data.decode("utf-8")
+        (x, y, w, h) = barcode.rect
+        orderIDs.append([orderID,x,y])
+    startTime=time.perf_counter()
+    print(f'识别画面所有二维码时间为:{(startTime-endTime)*1000}ms')
+    print(orderIDs)
     return image,box,rect, data
 
 
