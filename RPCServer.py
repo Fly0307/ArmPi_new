@@ -8,7 +8,7 @@ from ArmIK.ArmMoveIK import *
 from jsonrpc import JSONRPCResponseManager, dispatcher
 from werkzeug.serving import run_simple
 from werkzeug.wrappers import Request, Response
-# import QRcodeIdentify
+import QRcodeIdentify
 import threading
 import logging
 import time
@@ -27,18 +27,18 @@ __RPC_E05 = "E05 - Not callable"
 
 QUEUE = None
 
-# 夹持器夹取时闭合的角度
-servo1 = 500
-AK=ArmIK()
-# 初始位置
-def initMove():
-    print('init move')
-    Board.setBusServoPulse(1, servo1 - 50, 300)
-    Board.setBusServoPulse(2, 500, 500)
-    AK.setPitchRangeMoving((0, 10, 10), -30, -30, -90, 1500)
-    print("Init finished")
+# # 夹持器夹取时闭合的角度
+# servo1 = 500
+# AK=ArmIK()
+# # 初始位置
+# def initMove():
+#     print('init move')
+#     Board.setBusServoPulse(1, servo1 - 50, 300)
+#     Board.setBusServoPulse(2, 500, 500)
+#     AK.setPitchRangeMoving((0, 10, 10), -30, -30, -90, 1500)
+#     print("Init finished")
     
-initMove()
+# initMove()
 
 #设置PWM伺服脉冲
 @dispatcher.add_method
@@ -253,7 +253,7 @@ def application(request):
     '''
     dispatcher["echo"] = lambda s: s
     dispatcher["add"] = lambda a, b: a + b
-    # print(request.data)
+    print(request.data)
     response = JSONRPCResponseManager.handle(request.data, dispatcher)
     return Response(response.json, mimetype='application/json')
 
@@ -264,6 +264,7 @@ def startRPCServer():
     #    log = logging.getLogger('werkzeug')
     #    log.setLevel(logging.ERROR)
     # run_simple('',8090,application)
+    print('strat Armpi RPC')
     run_simple('', 9030, application)
 
 

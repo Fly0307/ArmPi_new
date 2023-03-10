@@ -289,7 +289,6 @@ def move():
                     print(result)
                     if not result:
                         continue
-                    # time.sleep(result[2]/1000)
 
                     if not __isRunning:
                         continue
@@ -301,11 +300,11 @@ def move():
                     if not __isRunning:
                         continue
                     Board.setBusServoPulse(1, servo1 - 200, 300)  # 爪子张开  ，放下物体
+                    time.sleep(0.3)
                     put_it=True
                     n=count[detect_block]
                     count[detect_block]=n+1
                     print("num %s"%(detect_block)+"=%d"%(n+1))
-                    time.sleep(0.3)
 
                     if not __isRunning:
                         continue
@@ -337,87 +336,6 @@ th = threading.Thread(target=move)
 th.setDaemon(True)#守护线程
 th.start()
 
-""" # 识别处理图片
-def detect(image):
-
-    # 读取图像并将其转化为灰度图片
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-
-    # 计算图像中x和y方向的Scharr梯度幅值表示
-    ddepth = cv2.CV_32F
-    gradX = cv2.Sobel(gray, ddepth=ddepth, dx=1, dy=0, ksize=-1)
-    gradY = cv2.Sobel(gray, ddepth=ddepth, dx=0, dy=1, ksize=-1)
-
-    # x方向的梯度减去y方向的梯度
-    gradient = cv2.subtract(gradX, gradY)
-    # 获取处理后的绝对值
-    gradient = cv2.convertScaleAbs(gradient)
-
-    # 对处理后的结果进行模糊操作
-    blurred = cv2.blur(gradient, (9, 9))
-    # 将其转化为二值图片
-    (_, thresh) = cv2.threshold(blurred, 225, 255, cv2.THRESH_BINARY)
-    # 构建一个掩码并将其应用在二值图片中
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (21, 7))
-    closed = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
-    # 执行多次膨胀和腐蚀操作
-    closed = cv2.erode(closed, None, iterations=4)
-    closed = cv2.dilate(closed, None, iterations=4)
-    #     cv2.imshow("closed", closed)
-    # 在二值图像中寻找轮廓, 然后根据区域大小对该轮廓进行排序，保留最大的一个轮廓
-    cnts = cv2.findContours(closed.copy(), cv2.RETR_EXTERNAL,
-                            cv2.CHAIN_APPROX_SIMPLE)
-    cnts = cnts[0]
-
-    if len(cnts) == 0:
-        return None, None, None
-
-    c = sorted(cnts, key=cv2.contourArea, reverse=True)[0]
-    # 计算最大的轮廓的最小外接矩形
-    rect = cv2.minAreaRect(c)
-    box = cv2.boxPoints(rect)
-    box = np.int0(box)
-
-    # print(box)
-
-    # 以下是为了将盒子中的图像遮住防止误识别
-    # 计算二维码的轮廓的最大最小的坐标值
-    x_max = x_min = y_max = y_min = 0
-    #     print(rect)
-    x_min = box[0][0]
-    y_min = box[0][1]
-    for i in range(4):
-        for j in range(2):
-            if j == 0:
-                if box[i][j] > x_max:
-                    x_max = box[i][j]
-                elif box[i][j] < x_min:
-                    x_min = box[i][j]
-            if j == 1:
-                if box[i][j] > y_max:
-                    y_max = box[i][j]
-                elif box[i][j] < y_min:
-                    y_min = box[i][j]
-    black_box = [[] for i in range(4)]
-    # 把遮盖位置左右边界扩大根据盒子和二维码张贴位置自行调整
-    # x_min -= 20
-    # x_max += 40
-    # 防止操作越界
-    # if x_min < 0:
-    #     x_min = 0
-    # if x_max > 640:
-    #     x_max = 640
-    # 计算二维码的轮廓的最大最小的坐标值
-    # black_box[0] = (x_min, y_max)
-    # black_box[1] = (x_min, 0)
-    # black_box[2] = (x_max, 0)
-    # black_box[3] = (x_max, y_max)
-    # 提取二维码后的盒子的坐标
-    black_box = np.int0(black_box)
-    # print(black_box)
-    return box, rect, black_box
-
- """
 def angle(a, R=10):
     x = 0.0
     y = 0.0
@@ -443,6 +361,9 @@ def angle(a, R=10):
 
 
 def decodeDisplay(image):
+    """ 
+    识别当前所有二维码，返回最大二维码的值
+    """
     global last_text
     barcodes = pyzbar.decode(image)
     num=len(barcodes)
@@ -469,7 +390,7 @@ def decodeDisplay(image):
     if max_barcode is not None:
         # 输出二维码信息
         # 找到二维码的最小边框位置
-        rect = cv2.minAreaRect(np.array(max_barcode.polygon, np.int32))
+        max_rect = cv2.minAreaRect(np.array(max_barcode.polygon, np.int32))
         box = cv2.boxPoints(rect)
         box = np.int0(box)
     (x, y, w, h) = max_barcode.rect
@@ -485,7 +406,7 @@ def decodeDisplay(image):
     startTime=time.perf_counter()
     print(f'识别画面所有二维码时间为:{(startTime-endTime)*1000}ms')
     print(orderIDs)
-    return image,box,rect, data
+    return image,box,max_rect, data
 
 
 # target_color,暂时用颜色代替地址

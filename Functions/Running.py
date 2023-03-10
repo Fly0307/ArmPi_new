@@ -3,13 +3,14 @@
 import sys
 import time
 import threading
+import QRcodeIdentify
 
 RunningFunc = 0
 LastHeartbeat = 0
 cam = None
 
 FUNCTIONS = {
-    1: None,    # 运动控制
+    1: QRcodeIdentify,    # 启动二维码识别货物
     2: None,    # 
 }
 
@@ -65,6 +66,7 @@ def stopFunc(tmp):
     return (True, (RunningFunc,))
 
 def heartbeatTask():
+    return
     global LastHeartbeat
     global RunningFunc
     while True:

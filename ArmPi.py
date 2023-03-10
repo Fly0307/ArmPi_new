@@ -28,7 +28,7 @@ def startArmPi():
     global HWEXT, HWSONIC
 
     RPCServer.QUEUE = QUEUE_RPC
-
+    print('strat Armpi RPC')
     threading.Thread(target=RPCServer.startRPCServer,
                      daemon=True).start()  # rpc服务器
     # threading.Thread(target=MjpgServer.startMjpgServer,
@@ -39,7 +39,7 @@ def startArmPi():
     Running.cam = cam
 
     while True:
-        time.sleep(0.03)
+        time.sleep(0.01)
 
         # 执行需要在本线程中执行的RPC命令
         while True:
@@ -54,22 +54,22 @@ def startArmPi():
                 break
         #####
         # # 执行功能程序：二维码识别
-        # try:
-        #     if Running.RunningFunc > 0 and Running.RunningFunc <= 9:
-        #         # if cam.frame is not None:
-        #         #     frame = cam.frame.copy()
-        #         #     img = Running.CurrentEXE().run(frame)
-        #         #     if Running.RunningFunc == 9:
-        #         #         MjpgServer.img_show = np.vstack((img, frame))
-        #         #     else:                       
-        #         #         MjpgServer.img_show = img
-        #         # else:
-        #         #     MjpgServer.img_show = loading_picture
-        #         break
-        #     else:
-        #         cam.frame = None
-        # except KeyboardInterrupt:
-        #     break
+        try:
+            if Running.RunningFunc > 0 and Running.RunningFunc <= 9:
+                if cam.frame is not None:
+                    frame = cam.frame.copy()
+                    img = Running.CurrentEXE().run(frame)
+                    # if Running.RunningFunc == 9:
+                    #     MjpgServer.img_show = np.vstack((img, frame))
+                    # else:                       
+                    #     MjpgServer.img_show = img
+                # else:
+                #     MjpgServer.img_show = loading_picture
+                break
+            else:
+                cam.frame = None
+        except KeyboardInterrupt:
+            break
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.ERROR)

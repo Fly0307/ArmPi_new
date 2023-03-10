@@ -71,7 +71,7 @@ class ArmIK:
         max_d = 0
         getBusServoPulse(1)
         newmovetime=movetime
-        print(f'servos{servos}')
+        # print(f'servos{servos}')
         for i in  range(0, 4):
             d = abs(getBusServoPulse(i + 3) - servos[i])
             print(f'Servo{i+3}-abs={d}')
