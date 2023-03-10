@@ -229,7 +229,7 @@ def Heartbeat():
 #心跳检测 识别抓取
 @dispatcher.add_method
 def ArmHeartbeat(alive):
-    print('ArmHeartbeat(alive)')
+    # print('ArmHeartbeat(alive)')
     return runbymainth(QRcodeIdentify.Heartbeat, alive)
 
 @dispatcher.add_method

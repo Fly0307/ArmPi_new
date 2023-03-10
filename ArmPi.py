@@ -31,16 +31,11 @@ def startArmPi():
     print('strat Armpi RPC')
     threading.Thread(target=RPCServer.startRPCServer,
                      daemon=True).start()  # rpc服务器
-    # threading.Thread(target=MjpgServer.startMjpgServer,
-    #                  daemon=True).start()  # mjpg流服务器
-    
-    loading_picture = cv2.imread('/home/pi/ArmPi/CameraCalibration/loading.jpg')
     cam = Camera.Camera()  # 相机读取
     Running.cam = cam
 
     while True:
         time.sleep(0.01)
-
         # 执行需要在本线程中执行的RPC命令
         while True:
             try:
@@ -51,7 +46,6 @@ def startArmPi():
                 ret[2] = req(params)  # 执行RPC命令
                 event.set()
             except:
-
                 break
         #####
         # # 执行功能程序：二维码识别
