@@ -79,8 +79,11 @@ class ArmIK:
                 max_d = d
         newmovetime = int(max_d)
         print(f'newmovetime={newmovetime},movetime={movetime}')
-        if(newmovetime<movetime):
-            movetime=newmovetime+20
+        if(movetime==None):
+            movetime=newmovetime
+        else:
+            if(newmovetime<movetime):
+                movetime=newmovetime+20
         setBusServoPulse(3, servos[0], movetime)
         setBusServoPulse(4, servos[1], movetime)
         setBusServoPulse(5, servos[2], movetime)
@@ -130,7 +133,7 @@ class ArmIK:
         servos, alpha = data[0], data[1]
 
         newmovetime = self.servosMove((servos["servo3"], servos["servo4"], servos["servo5"], servos["servo6"]), movetime)
-        time.sleep(newmovetime/1000)
+        # time.sleep(newmovetime/1000)
         print(f'预计运行时间{movetime}ms,实际运行时间{newmovetime}ms')
         return servos, alpha, newmovetime
     '''

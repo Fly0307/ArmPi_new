@@ -297,7 +297,7 @@ def getBusServoPulse(id):
     while True:
         serial_servo_read_cmd(id, LOBOT_SERVO_POS_READ)
         msg = serial_servo_get_rmsg(LOBOT_SERVO_POS_READ)
-        # print(msg)
+        print(msg)
         if msg is not None:
             return msg
         

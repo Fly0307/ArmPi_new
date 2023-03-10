@@ -1,0 +1,3708 @@
+QR initmove()
+(0, 10, 10)
+Servo3-abs=0
+Servo4-abs=4
+Servo5-abs=4
+Servo6-abs=2
+newmovetime=4,movetime=1500
+预计运行时间1500ms,实际运行时间24ms
+strat Armpi RPC
+strat Armpi RPC
+b'{"method": "LoadFunc", "params": [2], "jsonrpc": "2.0", "id": 4248307034293}'
+RuningFunc=0
+QRSorting Init
+QR initmove()
+(0, 10, 10)
+b'{"method": "StartFunc", "params": [], "jsonrpc": "2.0", "id": 7410890499255}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 1042760243376}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8662796887131}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4430183586064}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6612967553788}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8967687979943}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5884138509551}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6148657705772}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 1560043310338}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 1522699259482}'
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8229678966038}'
+Servo3-abs=0
+Servo4-abs=4
+Servo5-abs=3
+func run() started text=null state=0
+识别二维码时间为:5.492383999808226ms
+world_X= 2 world_Y=26
+QRSorting Start
+func run() started text=100000020 state=4
+detect_block=None
+func run() started text=100000020 state=4
+func run() started text=100000020 state=4
+func run() started text=100000020 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 1670800050944}'
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 1745345516495}'
+GetOrderId()
+func setTarget() started target_color=None text=100000020
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 6537985275186}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=100000020
+COLOR ('天津',)
+detect_block 天津
+天津
+move to world_X=2and world_Y=26
+(2.0, 26.21, 7)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+Servo3-abs=27
+func run() started text=100000020 state=1
+Servo4-abs=381
+func run() started text=100000020 state=1
+Servo5-abs=482
+Servo6-abs=20
+newmovetime=482,movetime=1500
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+预计运行时间1500ms,实际运行时间502ms
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+(2.0, 26.21, 5)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+Servo3-abs=11
+Servo4-abs=1
+Servo5-abs=5
+func run() started text=100000020 state=1
+Servo6-abs=3
+newmovetime=11,movetime=1000
+func run() started text=100000020 state=1
+预计运行时间1000ms,实际运行时间31ms
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+(2.0, 26.21, 1.5)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+Servo3-abs=19
+Servo4-abs=7
+func run() started text=100000020 state=1
+Servo5-abs=25
+Servo6-abs=2
+newmovetime=25,movetime=500
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+预计运行时间500ms,实际运行时间45ms
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+(2.0, 26.21, 9)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+Servo3-abs=5
+Servo4-abs=0
+Servo5-abs=79
+func run() started text=100000020 state=1
+Servo6-abs=2
+newmovetime=79,movetime=1000
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+预计运行时间1000ms,实际运行时间99ms
+(0, 10, 12)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+Servo3-abs=120
+func run() started text=100000020 state=1
+Servo4-abs=207
+Servo5-abs=356
+Servo6-abs=16
+newmovetime=356,movetime=1000
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 3173939989998}'
+func run() started text=100000020 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 7522449881795}'
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+预计运行时间1000ms,实际运行时间376ms
+机械臂抬起
+机械臂开始放下 detect_block=天津
+天津
+(-14.5, -0.5, 12)
+func run() started text=100000020 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 1354905530553}'
+GetOrderId()
+func run() started text=100000020 state=1
+Servo3-abs=3
+func setTarget() started target_color=None text=100000020
+func run() started text=100000020 state=1
+Servo4-abs=92
+Servo5-abs=121
+func run() started text=100000020 state=1
+Servo6-abs=387
+newmovetime=387,movetime=1000
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 5296895041758}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=100000020
+COLOR ('天津',)
+detect_block 天津
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+预计运行时间1000ms,实际运行时间407ms
+({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 407)
+(-14.5, -0.5, 2)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+Servo3-abs=6
+func run() started text=100000020 state=1
+Servo4-abs=9
+func run() started text=100000020 state=1
+Servo5-abs=152
+Servo6-abs=8
+newmovetime=152,movetime=1000
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+预计运行时间1000ms,实际运行时间172ms
+({'servo3': 68, 'servo4': 696, 'servo5': 386, 'servo6': 883}, -88, 172)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+num 天津=1
+(-14.5, -0.5, 12)
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+Servo3-abs=1
+Servo4-abs=7
+func run() started text=100000020 state=1
+Servo5-abs=163
+func run() started text=100000020 state=1
+Servo6-abs=1
+newmovetime=163,movetime=500
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+func run() started text=100000020 state=1
+预计运行时间500ms,实际运行时间183ms
+QR initmove()
+(0, 10, 10)
+Servo3-abs=73
+Servo4-abs=236
+Servo5-abs=270
+Servo6-abs=384
+newmovetime=384,movetime=1500
+识别二维码时间为:0.20777399913640693ms
+world_X= -6 world_Y=20
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+预计运行时间1500ms,实际运行时间404ms
+开始抓取到完成用时:4331.705050000892ms
+detect_block=None
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4504540323766}'
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 9872064978042}'
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 8500970279531}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 7192361693560}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+天津
+move to world_X=-6and world_Y=20
+(-6.63, 20.77, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=34
+func run() started text=000000004 state=1
+Servo4-abs=360
+Servo5-abs=437
+func run() started text=000000004 state=1
+Servo6-abs=77
+newmovetime=437,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间457ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.63, 20.77, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=36
+Servo4-abs=72
+Servo5-abs=46
+func run() started text=000000004 state=1
+Servo6-abs=1
+newmovetime=72,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间92ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.63, 20.77, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=36
+Servo4-abs=40
+func run() started text=000000004 state=1
+Servo5-abs=12
+Servo6-abs=1
+newmovetime=40,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间60ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.63, 20.77, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=10
+Servo4-abs=8
+func run() started text=000000004 state=1
+Servo5-abs=89
+Servo6-abs=1
+newmovetime=89,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间109ms
+func run() started text=000000004 state=1
+don't get it
+天津
+move to world_X=-6and world_Y=20
+(-6.63, 20.77, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=7
+Servo4-abs=17
+Servo5-abs=12
+func run() started text=000000004 state=1
+Servo6-abs=1
+newmovetime=17,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间37ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 3813667347745}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 7785254052951}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 5138356524464}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 6823940863320}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.63, 20.77, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=31
+Servo4-abs=67
+func run() started text=000000004 state=1
+Servo5-abs=51
+Servo6-abs=1
+newmovetime=67,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间87ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.63, 20.77, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=34
+Servo4-abs=38
+func run() started text=000000004 state=1
+Servo5-abs=12
+Servo6-abs=1
+newmovetime=38,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间58ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.63, 20.77, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=11
+func run() started text=000000004 state=1
+Servo4-abs=7
+Servo5-abs=88
+Servo6-abs=1
+newmovetime=88,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间108ms
+func run() started text=000000004 state=1
+don't get it
+QR initmove()
+(0, 10, 10)
+Servo3-abs=47
+Servo4-abs=372
+Servo5-abs=452
+Servo6-abs=73
+newmovetime=452,movetime=1500
+识别二维码时间为:0.1889040013338672ms
+world_X= 1 world_Y=19
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+预计运行时间1500ms,实际运行时间472ms
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6971424855074}'
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+func run() started text=000000009 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 9693874885988}'
+func run() started text=000000009 state=4
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 2679685313880}'
+GetOrderId()
+func run() started text=000000009 state=1
+func setTarget() started target_color=None text=000000009
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+b'{"method": "CargoPlacement", "params": ["\\u4e0a\\u6d77"], "jsonrpc": "2.0", "id": 8959483558054}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=上海 text=000000009
+COLOR ('上海',)
+detect_block 上海
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+detect_block=上海
+上海
+move to world_X=1and world_Y=19
+(1.89, 19.32, 7)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+Servo3-abs=57
+Servo4-abs=331
+func run() started text=000000009 state=1
+Servo5-abs=410
+Servo6-abs=25
+newmovetime=410,movetime=1500
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+预计运行时间1500ms,实际运行时间430ms
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+(1.89, 19.32, 5)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+Servo3-abs=4
+func run() started text=000000009 state=1
+Servo4-abs=15
+Servo5-abs=22
+func run() started text=000000009 state=1
+Servo6-abs=3
+newmovetime=22,movetime=1000
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+预计运行时间1000ms,实际运行时间42ms
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+(1.89, 19.32, 1.5)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+Servo3-abs=4
+Servo4-abs=28
+func run() started text=000000009 state=1
+Servo5-abs=50
+Servo6-abs=3
+newmovetime=50,movetime=500
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+预计运行时间500ms,实际运行时间70ms
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 2877591965456}'
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 1305173094199}'
+func run() started text=000000009 state=1
+(1.89, 19.32, 9)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+Servo3-abs=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 6961277703768}'
+GetOrderId()
+Servo4-abs=20
+func run() started text=000000009 state=1
+Servo5-abs=116
+func setTarget() started target_color=None text=000000009
+Servo6-abs=3
+newmovetime=116,movetime=1000
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+b'{"method": "CargoPlacement", "params": ["\\u4e0a\\u6d77"], "jsonrpc": "2.0", "id": 7480007976862}'
+CargoPlacement(*target_pos)
+func run() started text=000000009 state=1
+func setTarget() started target_color=上海 text=000000009
+COLOR ('上海',)
+detect_block 上海
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+预计运行时间1000ms,实际运行时间136ms
+(0, 10, 12)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+Servo3-abs=8
+Servo4-abs=183
+func run() started text=000000009 state=1
+Servo5-abs=272
+func run() started text=000000009 state=1
+Servo6-abs=20
+newmovetime=272,movetime=1000
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+预计运行时间1000ms,实际运行时间292ms
+机械臂抬起
+机械臂开始放下 detect_block=上海
+上海
+(-14.5, -6.5, 12)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+Servo3-abs=5
+func run() started text=000000009 state=1
+Servo4-abs=132
+Servo5-abs=148
+Servo6-abs=479
+newmovetime=479,movetime=1000
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+预计运行时间1000ms,实际运行时间499ms
+({'servo3': 62, 'servo4': 653, 'servo5': 503, 'servo6': 976}, -51, 499)
+(-14.5, -6.5, 2)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+Servo3-abs=1
+Servo4-abs=9
+func run() started text=000000009 state=1
+Servo5-abs=140
+Servo6-abs=15
+newmovetime=140,movetime=1000
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+预计运行时间1000ms,实际运行时间160ms
+({'servo3': 62, 'servo4': 655, 'servo5': 360, 'servo6': 976}, -86, 160)
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+num 上海=1
+(-14.5, -6.5, 12)
+func run() started text=000000009 state=1
+Servo3-abs=3
+func run() started text=000000009 state=1
+Servo4-abs=6
+Servo5-abs=152
+func run() started text=000000009 state=1
+Servo6-abs=1
+newmovetime=152,movetime=500
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+func run() started text=000000009 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5340729395460}'
+func run() started text=000000009 state=2
+预计运行时间500ms,实际运行时间172ms
+QR initmove()
+(0, 10, 10)
+func run() started text=null state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4559472296061}'
+Servo3-abs=74
+Servo4-abs=275
+Servo5-abs=309
+Servo6-abs=476
+newmovetime=476,movetime=1500
+识别二维码时间为:0.22569999964616727ms
+world_X= -6 world_Y=20
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 2200360843431}'
+func run() started text=000000004 state=4
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 3717541841693}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 3458865244554}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间496ms
+开始抓取到完成用时:4458.1921780009ms
+detect_block=天津
+天津
+move to world_X=-6and world_Y=20
+(-6.8, 20.64, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=55
+Servo4-abs=403
+Servo5-abs=456
+func run() started text=000000004 state=1
+Servo6-abs=75
+newmovetime=456,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间476ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.8, 20.64, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=5
+Servo4-abs=1
+Servo5-abs=13
+Servo6-abs=2
+newmovetime=13,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间33ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.8, 20.64, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=31
+Servo4-abs=30
+Servo5-abs=19
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=31,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间51ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.8, 20.64, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=14
+func run() started text=000000004 state=1
+Servo4-abs=9
+Servo5-abs=89
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=89,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 2497790293820}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 6893575852495}'
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间109ms
+func run() started text=000000004 state=1
+don't get it
+天津
+move to world_X=-6and world_Y=20
+(-6.8, 20.64, 7)
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 4285525433965}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+Servo3-abs=22
+func run() started text=000000004 state=1
+Servo4-abs=40
+Servo5-abs=21
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=40,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 2420037753098}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间60ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.8, 20.64, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=5
+Servo4-abs=0
+func run() started text=000000004 state=1
+Servo5-abs=15
+Servo6-abs=2
+newmovetime=15,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间35ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.8, 20.64, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=31
+Servo4-abs=30
+func run() started text=000000004 state=1
+Servo5-abs=18
+Servo6-abs=2
+newmovetime=31,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间51ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.8, 20.64, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=12
+func run() started text=000000004 state=1
+Servo4-abs=8
+Servo5-abs=88
+Servo6-abs=3
+newmovetime=88,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间108ms
+func run() started text=000000004 state=1
+don't get it
+QR initmove()
+(0, 10, 10)
+func run() started text=null state=1
+Servo3-abs=46
+Servo4-abs=362
+Servo5-abs=441
+Servo6-abs=75
+newmovetime=441,movetime=1500
+识别二维码时间为:0.22232999981497414ms
+world_X= -4 world_Y=26
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+预计运行时间1500ms,实际运行时间461ms
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 7110131570902}'
+func run() started text=000000003 state=4
+func run() started text=000000003 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 3725128650838}'
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 4302956188967}'
+GetOrderId()
+func setTarget() started target_color=None text=000000003
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 1381387865905}'
+CargoPlacement(*target_pos)
+func run() started text=000000003 state=1
+func setTarget() started target_color=天津 text=000000003
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+detect_block=天津
+天津
+move to world_X=-4and world_Y=26
+(-4.78, 26.77, 7)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=22
+Servo4-abs=431
+func run() started text=000000003 state=1
+Servo5-abs=515
+Servo6-abs=40
+newmovetime=515,movetime=1500
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+预计运行时间1500ms,实际运行时间535ms
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+(-4.78, 26.77, 5)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=11
+func run() started text=000000003 state=1
+Servo4-abs=2
+Servo5-abs=4
+Servo6-abs=2
+newmovetime=11,movetime=1000
+func run() started text=000000003 state=1
+预计运行时间1000ms,实际运行时间31ms
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+(-4.78, 26.77, 1.5)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=53
+Servo4-abs=61
+func run() started text=000000003 state=1
+Servo5-abs=1
+Servo6-abs=2
+newmovetime=61,movetime=500
+func run() started text=000000003 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 3699678627427}'
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 3370980592347}'
+预计运行时间500ms,实际运行时间81ms
+func run() started text=000000003 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 9542709428698}'
+GetOrderId()
+func setTarget() started target_color=None text=000000003
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 4946088108595}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000003
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+(-4.78, 26.77, 9)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=20
+Servo4-abs=23
+func run() started text=000000003 state=1
+Servo5-abs=66
+Servo6-abs=1
+newmovetime=66,movetime=1000
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+预计运行时间1000ms,实际运行时间86ms
+don't get it
+天津
+move to world_X=-4and world_Y=26
+(-4.78, 26.77, 7)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=37
+Servo4-abs=68
+func run() started text=000000003 state=1
+Servo5-abs=18
+Servo6-abs=1
+newmovetime=68,movetime=1500
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+预计运行时间1500ms,实际运行时间88ms
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+(-4.78, 26.77, 5)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=6
+func run() started text=000000003 state=1
+Servo4-abs=2
+Servo5-abs=4
+func run() started text=000000003 state=1
+Servo6-abs=2
+newmovetime=6,movetime=1000
+func run() started text=000000003 state=1
+预计运行时间1000ms,实际运行时间26ms
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+(-4.78, 26.77, 1.5)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=52
+Servo4-abs=61
+func run() started text=000000003 state=1
+Servo5-abs=2
+Servo6-abs=1
+newmovetime=61,movetime=500
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+预计运行时间500ms,实际运行时间81ms
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+(-4.78, 26.77, 9)
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+Servo3-abs=19
+Servo4-abs=23
+func run() started text=000000003 state=1
+Servo5-abs=66
+func run() started text=000000003 state=1
+Servo6-abs=1
+newmovetime=66,movetime=1000
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+预计运行时间1000ms,实际运行时间86ms
+func run() started text=000000003 state=1
+func run() started text=000000003 state=1
+don't get it
+QR initmove()
+(0, 10, 10)
+func run() started text=null state=1
+Servo3-abs=52
+Servo4-abs=362
+Servo5-abs=485
+Servo6-abs=41
+newmovetime=485,movetime=1500
+No barcode found.
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6863067515121}'
+预计运行时间1500ms,实际运行时间505ms
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 9509642452763}'
+No barcode found.
+detect_block=None
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 2234735126682}'
+识别二维码时间为:20.574639998812927ms
+world_X= -6 world_Y=20
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 5751109779202}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 8157951772162}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 6463298105509}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+天津
+move to world_X=-6and world_Y=20
+(-6.81, 20.53, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=58
+Servo4-abs=387
+func run() started text=000000004 state=1
+Servo5-abs=451
+func run() started text=000000004 state=1
+Servo6-abs=74
+newmovetime=451,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间471ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.81, 20.53, 5)
+func run() started text=000000004 state=1
+Servo3-abs=3
+func run() started text=000000004 state=1
+Servo4-abs=0
+Servo5-abs=13
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=13,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间33ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.81, 20.53, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=6
+Servo4-abs=37
+func run() started text=000000004 state=1
+Servo5-abs=53
+Servo6-abs=2
+newmovetime=53,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间73ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.81, 20.53, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=16
+Servo4-abs=57
+Servo5-abs=105
+func run() started text=000000004 state=1
+Servo6-abs=4
+newmovetime=105,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间125ms
+don't get it
+天津
+move to world_X=-6and world_Y=20
+(-6.81, 20.53, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=7
+Servo4-abs=26
+func run() started text=000000004 state=1
+Servo5-abs=20
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=26,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间46ms
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4473271110075}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 8251329964274}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 2851428636786}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 1176009052055}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.81, 20.53, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=3
+func run() started text=000000004 state=1
+Servo4-abs=0
+Servo5-abs=15
+Servo6-abs=1
+newmovetime=15,movetime=1000
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间35ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.81, 20.53, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=6
+func run() started text=000000004 state=1
+Servo4-abs=37
+Servo5-abs=52
+Servo6-abs=2
+newmovetime=52,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间72ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.81, 20.53, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=18
+func run() started text=000000004 state=1
+Servo4-abs=47
+Servo5-abs=120
+Servo6-abs=3
+newmovetime=120,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间140ms
+(0, 10, 12)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1Servo3-abs=23
+
+func run() started text=000000004 state=1
+Servo4-abs=210
+Servo5-abs=311
+func run() started text=000000004 state=1
+Servo6-abs=73
+newmovetime=311,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间331ms
+机械臂抬起
+机械臂开始放下 detect_block=天津
+天津
+(-14.5, -0.5, 12)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=1
+Servo4-abs=95
+func run() started text=000000004 state=1
+Servo5-abs=117
+func run() started text=000000004 state=1
+Servo6-abs=381
+newmovetime=381,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间401ms
+({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 401)
+(-14.5, -0.5, 3)
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 7780451810631}'
+func run() started text=000000004 state=2
+Servo3-abs=0
+func run() started text=000000004 state=2
+Servo4-abs=10
+Servo5-abs=138
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5429406050410}'
+Servo6-abs=16
+newmovetime=138,movetime=1000
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5475074369432}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5375728872508}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+预计运行时间1000ms,实际运行时间158ms
+({'servo3': 64, 'servo4': 697, 'servo5': 404, 'servo6': 883}, -85, 158)
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 9724411257728}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 2783937261087}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 1277216025225}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5571339512037}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4311321901833}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8847558745386}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4229795450955}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 1980483901752}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5623807085604}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 9384386974682}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6347729266902}'
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+num 天津=2
+(-14.5, -0.5, 12)
+func run() started text=000000004 state=2
+Servo3-abs=1
+func run() started text=000000004 state=2
+Servo4-abs=4
+func run() started text=000000004 state=2
+Servo5-abs=145
+Servo6-abs=2
+newmovetime=145,movetime=500
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+func run() started text=000000004 state=2
+预计运行时间500ms,实际运行时间165ms
+QR initmove()
+func run() started text=null state=2
+(0, 10, 10)
+Servo3-abs=71
+Servo4-abs=237
+Servo5-abs=276
+Servo6-abs=386
+newmovetime=386,movetime=1500
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6110163411320}'
+识别二维码时间为:0.18088500110025052ms
+world_X= -6 world_Y=20
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 2649977927382}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 6879334836050}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 1842067041748}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间406ms
+开始抓取到完成用时:3870.156479999423ms
+detect_block=天津
+天津
+move to world_X=-6and world_Y=20
+(-6.94, 20.25, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=37
+func run() started text=000000004 state=1
+Servo4-abs=357
+Servo5-abs=431
+Servo6-abs=71
+newmovetime=431,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间451ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.94, 20.25, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=29
+Servo4-abs=56
+func run() started text=000000004 state=1
+Servo5-abs=41
+Servo6-abs=2
+newmovetime=56,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间76ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.94, 20.25, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=36
+Servo4-abs=37
+func run() started text=000000004 state=1
+Servo5-abs=11
+Servo6-abs=2
+newmovetime=37,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间57ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.94, 20.25, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=21
+func run() started text=000000004 state=1
+Servo4-abs=25
+Servo5-abs=81
+Servo6-abs=3
+newmovetime=81,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间101ms
+func run() started text=000000004 state=1
+don't get it
+天津
+move to world_X=-6and world_Y=20
+(-6.94, 20.25, 7)
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 7584878233826}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=10
+Servo4-abs=21
+Servo5-abs=11
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=21,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 3379699035752}'
+预计运行时间1500ms,实际运行时间41ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 9391293823043}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 8919996528548}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.94, 20.25, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=24
+Servo4-abs=52
+Servo5-abs=46
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=52,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间72ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.94, 20.25, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=34
+Servo4-abs=37
+func run() started text=000000004 state=1
+Servo5-abs=12
+Servo6-abs=2
+newmovetime=37,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间57ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-6.94, 20.25, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=20
+Servo4-abs=25
+func run() started text=000000004 state=1
+Servo5-abs=81
+Servo6-abs=1
+newmovetime=81,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间101ms
+don't get it
+QR initmove()
+func run() started text=null state=1
+(0, 10, 10)
+Servo3-abs=57
+Servo4-abs=376
+Servo5-abs=444
+Servo6-abs=77
+newmovetime=444,movetime=1500
+No barcode found.
+预计运行时间1500ms,实际运行时间464ms
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6408528322262}'
+func run() started text=null state=0
+识别二维码时间为:0.17944100000022445ms
+world_X= -7 world_Y=19
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5172315365709}'
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 7171699432022}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 4667952317721}'
+GetOrderId()
+func run() started text=000000004 state=1
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+detect_block=None
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 2363873360609}'
+CargoPlacement(*target_pos)
+func run() started text=000000004 state=1
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+天津
+move to world_X=-7and world_Y=19
+(-7.68, 19.61, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=51
+Servo4-abs=367
+func run() started text=000000004 state=1
+Servo5-abs=437
+Servo6-abs=87
+newmovetime=437,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间457ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-7.68, 19.61, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=6
+Servo4-abs=1
+func run() started text=000000004 state=1
+Servo5-abs=10
+func run() started text=000000004 state=1
+Servo6-abs=3
+newmovetime=10,movetime=1000
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间30ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-7.68, 19.61, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=9
+Servo4-abs=10
+func run() started text=000000004 state=1
+Servo5-abs=44
+Servo6-abs=2
+newmovetime=44,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间64ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-7.68, 19.61, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=31
+func run() started text=000000004 state=1
+Servo4-abs=48
+Servo5-abs=73
+Servo6-abs=3
+newmovetime=73,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间93ms
+don't get it
+天津
+move to world_X=-7and world_Y=19
+(-7.68, 19.61, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=14
+Servo4-abs=31
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo5-abs=15
+Servo6-abs=2
+newmovetime=31,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间51ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4152788760006}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 9280219605875}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 6344221863540}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-7.68, 19.61, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=11
+Servo4-abs=5
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 6872195522261}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+Servo5-abs=13
+Servo6-abs=2
+newmovetime=13,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间33ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-7.68, 19.61, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=9
+Servo4-abs=11
+func run() started text=000000004 state=1
+Servo5-abs=42
+Servo6-abs=2
+newmovetime=42,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间62ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-7.68, 19.61, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=32
+Servo4-abs=48
+func run() started text=000000004 state=1
+Servo5-abs=73
+Servo6-abs=3
+newmovetime=73,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间93ms
+don't get it
+QR initmove()
+(0, 10, 10)
+func run() started text=null state=1
+Servo3-abs=69
+Servo4-abs=390
+Servo5-abs=453
+Servo6-abs=87
+newmovetime=453,movetime=1500
+识别二维码时间为:0.20764500004588626ms
+world_X= -2 world_Y=15
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+预计运行时间1500ms,实际运行时间473ms
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6272325416274}'
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 9644106980293}'
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 2589834559036}'
+GetOrderId()
+func setTarget() started target_color=None text=000000005
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "CargoPlacement", "params": ["\\u6210\\u90fd"], "jsonrpc": "2.0", "id": 1281574243164}'
+CargoPlacement(*target_pos)
+func run() started text=000000005 state=1
+func setTarget() started target_color=成都 text=000000005
+COLOR ('成都',)
+detect_block 成都
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+detect_block=成都
+成都
+move to world_X=-2and world_Y=15
+(-2.96, 15.87, 7)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=71
+Servo4-abs=272
+func run() started text=000000005 state=1
+Servo5-abs=356
+Servo6-abs=42
+newmovetime=356,movetime=1500
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1500ms,实际运行时间376ms
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+(-2.96, 15.87, 5)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=3
+Servo4-abs=8
+func run() started text=000000005 state=1
+Servo5-abs=25
+Servo6-abs=2
+newmovetime=25,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间45ms
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+(-2.96, 15.87, 1.5)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=2
+Servo4-abs=25
+Servo5-abs=58
+func run() started text=000000005 state=1
+Servo6-abs=2
+newmovetime=58,movetime=500
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间500ms,实际运行时间78ms
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+(-2.96, 15.87, 9)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=2
+Servo4-abs=18
+Servo5-abs=115
+func run() started text=000000005 state=1
+Servo6-abs=2
+newmovetime=115,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4936708938044}'
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间135ms
+(0, 10, 12)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=2
+func run() started text=000000005 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 7743974633058}'
+func run() started text=000000005 state=1
+Servo4-abs=127
+Servo5-abs=215
+Servo6-abs=42
+newmovetime=215,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 3974105346801}'
+GetOrderId()
+func setTarget() started target_color=None text=000000005
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "CargoPlacement", "params": ["\\u6210\\u90fd"], "jsonrpc": "2.0", "id": 6669422043797}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=成都 text=000000005
+COLOR ('成都',)
+detect_block 成都
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间235ms
+机械臂抬起
+机械臂开始放下 detect_block=成都
+成都
+(-14.5, 5.5, 12)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=1
+func run() started text=000000005 state=1
+Servo4-abs=127
+func run() started text=000000005 state=1
+Servo5-abs=163
+Servo6-abs=286
+newmovetime=286,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间306ms
+({'servo3': 61, 'servo4': 661, 'servo5': 512, 'servo6': 788}, -51, 306)
+(-14.5, 5.5, 2)
+func run() started text=000000005 state=1
+Servo3-abs=9
+func run() started text=000000005 state=1
+Servo4-abs=2
+Servo5-abs=136
+func run() started text=000000005 state=1
+Servo6-abs=8
+newmovetime=136,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间156ms
+({'servo3': 70, 'servo4': 676, 'servo5': 373, 'servo6': 788}, -86, 156)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+num 成都=1
+(-14.5, 5.5, 12)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=6
+func run() started text=000000005 state=1
+Servo4-abs=16
+Servo5-abs=147
+Servo6-abs=1
+newmovetime=147,movetime=500
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间500ms,实际运行时间167ms
+QR initmove()
+(0, 10, 10)
+func run() started text=null state=1
+Servo3-abs=73
+Servo4-abs=265
+Servo5-abs=300
+Servo6-abs=289
+newmovetime=300,movetime=1500
+识别二维码时间为:0.19464499928290024ms
+world_X= -8 world_Y=19
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+预计运行时间1500ms,实际运行时间320ms
+开始抓取到完成用时:3957.1219890003704ms
+detect_block=None
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6702116934401}'
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+func run() started text=000000004 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 9927603658407}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 2262136709123}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 9661557130180}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+天津
+move to world_X=-8and world_Y=19
+(-8.1, 19.61, 7)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=59
+Servo4-abs=385
+func run() started text=000000004 state=1
+Servo5-abs=448
+Servo6-abs=97
+newmovetime=448,movetime=1500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1500ms,实际运行时间468ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-8.1, 19.61, 5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=6
+Servo4-abs=5
+Servo5-abs=10
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=10,movetime=1000
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间30ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-8.1, 19.61, 1.5)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=6
+func run() started text=000000004 state=1
+Servo4-abs=18
+Servo5-abs=44
+Servo6-abs=2
+newmovetime=44,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间64ms
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+(-8.1, 19.61, 9)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=9
+Servo4-abs=19
+func run() started text=000000004 state=1
+Servo5-abs=106
+Servo6-abs=2
+newmovetime=106,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间126ms
+func run() started text=000000004 state=1
+(0, 10, 12)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=16
+Servo4-abs=214
+func run() started text=000000004 state=1
+Servo5-abs=312
+Servo6-abs=92
+newmovetime=312,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8378589849950}'
+func run() started text=000000004 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 1219391195530}'
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 2464666922101}'
+GetOrderId()
+func setTarget() started target_color=None text=000000004
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 5773309093589}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=天津 text=000000004
+COLOR ('天津',)
+detect_block 天津
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间332ms
+机械臂抬起
+机械臂开始放下 detect_block=天津
+天津
+(-14.5, -0.5, 12)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=1
+Servo4-abs=96
+func run() started text=000000004 state=1
+Servo5-abs=119
+Servo6-abs=380
+newmovetime=380,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间400ms
+({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 400)
+(-14.5, -0.5, 4)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=2
+Servo4-abs=0
+func run() started text=000000004 state=1
+Servo5-abs=114
+Servo6-abs=19
+newmovetime=114,movetime=1000
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间1000ms,实际运行时间134ms
+({'servo3': 67, 'servo4': 707, 'servo5': 427, 'servo6': 883}, -81, 134)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+num 天津=3
+(-14.5, -0.5, 12)
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+Servo3-abs=1
+Servo4-abs=14
+Servo5-abs=122
+func run() started text=000000004 state=1
+Servo6-abs=2
+newmovetime=122,movetime=500
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+func run() started text=000000004 state=1
+预计运行时间500ms,实际运行时间142ms
+QR initmove()
+func run() started text=null state=1
+(0, 10, 10)
+Servo3-abs=73
+Servo4-abs=231
+Servo5-abs=275
+Servo6-abs=385
+newmovetime=385,movetime=1500
+识别二维码时间为:0.2279779982927721ms
+world_X= -4 world_Y=15
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+预计运行时间1500ms,实际运行时间405ms
+开始抓取到完成用时:4177.524098000504ms
+detect_block=None
+func run() started text=000000005 state=4
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5804309097164}'
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+func run() started text=000000005 state=4
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 8237538186525}'
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 4730362760746}'
+GetOrderId()
+func setTarget() started target_color=None text=000000005
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "CargoPlacement", "params": ["\\u6210\\u90fd"], "jsonrpc": "2.0", "id": 8746777280183}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=成都 text=000000005
+COLOR ('成都',)
+detect_block 成都
+func run() started text=000000005 state=1
+成都
+move to world_X=-4and world_Y=15
+(-4.68, 15.69, 7)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=63
+Servo4-abs=264
+func run() started text=000000005 state=1
+Servo5-abs=351
+func run() started text=000000005 state=1
+Servo6-abs=72
+newmovetime=351,movetime=1500
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1500ms,实际运行时间371ms
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+(-4.68, 15.69, 5)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=1
+Servo4-abs=12
+func run() started text=000000005 state=1
+Servo5-abs=25
+Servo6-abs=3
+newmovetime=25,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间45ms
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+(-4.68, 15.69, 1.5)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=2
+func run() started text=000000005 state=1
+Servo4-abs=26
+Servo5-abs=59
+Servo6-abs=2
+newmovetime=59,movetime=500
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间500ms,实际运行时间79ms
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+(-4.68, 15.69, 9)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=2
+Servo4-abs=13
+func run() started text=000000005 state=1
+Servo5-abs=128
+Servo6-abs=3
+newmovetime=128,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间148ms
+func run() started text=000000005 state=1
+(0, 10, 12)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=7
+Servo4-abs=117
+func run() started text=000000005 state=1
+Servo5-abs=221
+Servo6-abs=66
+newmovetime=221,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5659744546383}'
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 2957453878896}'
+预计运行时间1000ms,实际运行时间241ms
+机械臂抬起
+机械臂开始放下 detect_block=成都
+成都
+(-14.5, 5.5, 12)
+func run() started text=000000005 state=1
+b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 8468907315965}'
+GetOrderId()
+func run() started text=000000005 state=1
+Servo3-abs=5
+Servo4-abs=127
+func setTarget() started target_color=None text=000000005
+func run() started text=000000005 state=1
+Servo5-abs=143
+Servo6-abs=287
+newmovetime=287,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+b'{"method": "CargoPlacement", "params": ["\\u6210\\u90fd"], "jsonrpc": "2.0", "id": 9124016697268}'
+CargoPlacement(*target_pos)
+func setTarget() started target_color=成都 text=000000005
+COLOR ('成都',)
+detect_block 成都
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间307ms
+({'servo3': 61, 'servo4': 661, 'servo5': 512, 'servo6': 788}, -51, 307)
+(-14.5, 5.5, 3)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=4
+Servo4-abs=5
+func run() started text=000000005 state=1
+Servo5-abs=115
+Servo6-abs=12
+newmovetime=115,movetime=1000
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间1000ms,实际运行时间135ms
+({'servo3': 68, 'servo4': 680, 'servo5': 391, 'servo6': 788}, -83, 135)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+num 成都=2
+(-14.5, 5.5, 12)
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+Servo3-abs=5
+func run() started text=000000005 state=1
+Servo4-abs=22
+Servo5-abs=129
+func run() started text=000000005 state=1
+Servo6-abs=1
+newmovetime=129,movetime=500
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+func run() started text=000000005 state=1
+预计运行时间500ms,实际运行时间149ms
+QR initmove()
+(0, 10, 10)
+func run() started text=null state=1
+Servo3-abs=74
+Servo4-abs=265
+Servo5-abs=301
+Servo6-abs=289
+newmovetime=301,movetime=1500
+No barcode found.
+预计运行时间1500ms,实际运行时间321ms
+开始抓取到完成用时:3919.8184329998185ms
+detect_block=None
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6142097027898}'
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 2397561972155}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 9521417299173}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 9834486445834}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 9154676962884}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 4698078706434}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8880282720874}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8536490608361}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 2957532673431}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6214639572930}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 2536226282010}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 7450475439065}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6448134173214}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 5405430810941}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8276368237042}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 3345217249114}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 3116531162825}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 8761346300490}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 3193835769829}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6444057683693}'
+No barcode found.
+func run() started text=null state=0
+b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 6286998929038}'

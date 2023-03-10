@@ -29,19 +29,17 @@ def CurrentEXE():
 def loadFunc(newf):
     global RunningFunc
     new_func = newf[0]
-
     doHeartbeat()
-
     if new_func < 1 or new_func > 9:
-        return (False,  sys._getframe().f_code.co_name + ": Invalid argument")
+        return (False, sys._getframe().f_code.co_name + ": Invalid argument")
     else:
         print(f'RuningFunc={RunningFunc}')
         try:
             if RunningFunc > 1:
                 FUNCTIONS[RunningFunc].exit()
             RunningFunc = newf[0]
-            cam.camera_close()
-            cam.camera_open()
+            # cam.camera_close()
+            # cam.camera_open()
             FUNCTIONS[RunningFunc].init()
         except Exception as e:
             print(e)
