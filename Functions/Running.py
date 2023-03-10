@@ -4,14 +4,17 @@ import sys
 import time
 import threading
 import QRcodeIdentify
+import Functions.RemoteControl as RemoteControl
+
 
 RunningFunc = 0
 LastHeartbeat = 0
 cam = None
 
 FUNCTIONS = {
-    1: QRcodeIdentify,    # 启动二维码识别货物
-    2: None,    # 
+    1: RemoteControl,
+    2:QRcodeIdentify,    # 启动二维码识别货物
+    3: None,    # 
 }
 
 def doHeartbeat(tmp=()):
@@ -32,6 +35,7 @@ def loadFunc(newf):
     if new_func < 1 or new_func > 9:
         return (False,  sys._getframe().f_code.co_name + ": Invalid argument")
     else:
+        print(f'RuningFunc={RunningFunc}')
         try:
             if RunningFunc > 1:
                 FUNCTIONS[RunningFunc].exit()

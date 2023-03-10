@@ -20,28 +20,28 @@ if sys.version_info.major == 2:
 AK = ArmIK()
 
 range_rgb = {
-    'red':   (0, 0, 255),
-    'blue':  (255, 0, 0),
-    'green': (0, 255, 0),
+    '成都':   (0, 0, 255),
+    '上海':  (255, 0, 0),
+    '天津': (0, 255, 0),
     'black': (0, 0, 0),
     'white': (255, 255, 255),
 }
 # 放置位置,代表地址，和demo图纸不同颜色对应
 # placement_area = {
-#     'red':   (-15 + 0.5, 12 - 0.5, 1.5),
-#     'green': (-15 + 0.5, 6 - 0.5,  1.5),
-#     'blue':  (-15 + 0.5, 0 - 0.5,  1.5),
+#     '成都':   (-15 + 0.5, 12 - 0.5, 1.5),
+#     '天津': (-15 + 0.5, 6 - 0.5,  1.5),
+#     '上海':  (-15 + 0.5, 0 - 0.5,  1.5),
 # }
 # coordinate = {
-#     'red':   (-15 + 0.5, 12 - 0.5, 2),
-#     'green': (-15 + 0.5, 6 - 0.5,  2),
-#     'blue':  (-15 + 0.5, 0 - 0.5,  2),
+#     '成都':   (-15 + 0.5, 12 - 0.5, 2),
+#     '天津': (-15 + 0.5, 6 - 0.5,  2),
+#     '上海':  (-15 + 0.5, 0 - 0.5,  2),
 # }
 #坐标以机械臂底座舵机为中心
 coordinate = {
-        'red':   (-15 + 0.5, 6 - 0.5, 2),
-        'green': (-15 + 0.5, -0 - 0.5,  2),
-        'blue':  (-15 + 0.5, -6 - 0.5,  2),
+        '成都':   (-15 + 0.5, 6 - 0.5, 2),
+        '天津': (-15 + 0.5, -0 - 0.5,  2),
+        '上海':  (-15 + 0.5, -6 - 0.5,  2),
     }
 
 
@@ -86,9 +86,9 @@ def set_rgb(color):
         Board.RGB.show()
 
 
-count = {'red':   0,
-    'green': 0,
-    'blue':  0,}  # 放置高度计数
+count = {'成都':   0,
+    '天津': 0,
+    '上海':  0,}  # 放置高度计数
 _stop = False
 color_list = []
 get_roi = False
@@ -121,9 +121,9 @@ def reset():
     global pick_up
     global z_r, z_g, z_b, z
 
-    count = count = {'red':   0,
-    'green': 0,
-    'blue':  0,} 
+    count = count = {'成都':   0,
+    '天津': 0,
+    '上海':  0,} 
     _stop = False
     color_list = []
     get_roi = False
@@ -131,9 +131,9 @@ def reset():
     start_pick_up = False
     pick_up=False
     start_pick_down = False
-    z_r = coordinate['red'][2]
-    z_g = coordinate['green'][2]
-    z_b = coordinate['blue'][2]
+    z_r = coordinate['成都'][2]
+    z_g = coordinate['天津'][2]
+    z_b = coordinate['上海'][2]
     z = z_r
 
 
@@ -233,6 +233,7 @@ def move():
                             continue
                         result=AK.setPitchRangeMoving(
                             (world_X, world_Y, 1.5), -90, -90, 0,500)  # 降低高度到2cm
+                        
 
                         if not __isRunning:
                             continue
@@ -372,9 +373,9 @@ def decodeDisplay(image):
     rect=None
     startTime=time.perf_counter()
     if not barcodes:
-            print('No barcode found.')
-            time.sleep(1)
-            return image,box,rect, data
+        print('No barcode found.')
+        time.sleep(1)
+        return image,box,rect, data
     # 记录最大面积的二维码
     max_area = 0
     max_barcode = None
@@ -391,21 +392,21 @@ def decodeDisplay(image):
         # 输出二维码信息
         # 找到二维码的最小边框位置
         max_rect = cv2.minAreaRect(np.array(max_barcode.polygon, np.int32))
-        box = cv2.boxPoints(rect)
+        box = cv2.boxPoints(max_rect)
         box = np.int0(box)
     (x, y, w, h) = max_barcode.rect
     barcodeData = max_barcode.data.decode("utf-8")
     data.append([x, y, w, h, barcodeData])
     endTime=time.perf_counter()
     print(f'识别二维码时间为:{(endTime-startTime)*1000}ms')
-    orderIDs=[]
-    for barcode in barcodes:
-        orderID = barcode.data.decode("utf-8")
-        (x, y, w, h) = barcode.rect
-        orderIDs.append([orderID,x,y])
-    startTime=time.perf_counter()
-    print(f'识别画面所有二维码时间为:{(startTime-endTime)*1000}ms')
-    print(orderIDs)
+    # orderIDs=[]
+    # for barcode in barcodes:
+    #     orderID = barcode.data.decode("utf-8")
+    #     (x, y, w, h) = barcode.rect
+    #     orderIDs.append([orderID,x,y])
+    # startTime=time.perf_counter()
+    # print(f'识别画面所有二维码时间为:{(startTime-endTime)*1000}ms')
+    # print(orderIDs)
     return image,box,max_rect, data
 
 
@@ -532,20 +533,20 @@ def QRcode_sort_debug():
                             # print(xx, yy)
                             # 检测到特定二维码内容时才会抓取
                             if data[0][4] == '000000004' or data[0][4]=='000000019':
-                                detect_block = 'blue'
+                                detect_block = '上海'
                                 start_pick_up = True
                                 start_pick_down=True
-                                # coordinate['blue'] = (xx+2, yy+5, 12)
+                                # coordinate['上海'] = (xx+2, yy+5, 12)
                             elif data[0][4] == '100000020' or data[0][4]=='000000009':
-                                detect_block = 'red'
+                                detect_block = '成都'
                                 start_pick_up = True
                                 start_pick_down=True
-                                # coordinate['red'] = (xx+2, yy+5, 12)
+                                # coordinate['成都'] = (xx+2, yy+5, 12)
                             elif data[0][4] == '000000003'or data[0][4]=='000000005':
-                                detect_block = 'green'
+                                detect_block = '天津'
                                 start_pick_up = True
                                 start_pick_down=True
-                                # coordinate['green'] = (xx+2, yy+5, 12)
+                                # coordinate['天津'] = (xx+2, yy+5, 12)
                             else:
                                 detect_block = 'None'
                             # return text
@@ -589,6 +590,7 @@ def run(frame):
     print('func run() started text=%s'%(text)+' state=%d'%(state))
     if frame is not None:
         img=frame.copy()
+        cv2.imshow('img', frame)
     else:
         print("no frame")
         return
@@ -612,6 +614,7 @@ def run(frame):
             if len(data) != 0 :
                 text = data[0][4]
             state=4
+    cv2.imshow('frame', frame)
     return img
 
 if __name__ == '__main__':

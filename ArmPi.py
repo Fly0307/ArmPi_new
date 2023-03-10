@@ -9,7 +9,7 @@ import Camera
 import logging
 import threading
 import RPCServer
-# import MjpgServer
+import MjpgServer
 import numpy as np
 import HiwonderSDK.Board as Board
 import Functions.Running as Running
@@ -51,6 +51,7 @@ def startArmPi():
                 ret[2] = req(params)  # 执行RPC命令
                 event.set()
             except:
+
                 break
         #####
         # # 执行功能程序：二维码识别
@@ -63,9 +64,9 @@ def startArmPi():
                     #     MjpgServer.img_show = np.vstack((img, frame))
                     # else:                       
                     #     MjpgServer.img_show = img
-                # else:
-                #     MjpgServer.img_show = loading_picture
-                break
+                else:
+                    # MjpgServer.img_show = loading_picture
+                    break
             else:
                 cam.frame = None
         except KeyboardInterrupt:
