@@ -10,6 +10,7 @@ from ArmIK.ArmMoveIK import *
 import HiwonderSDK.Board as Board
 from math import *
 import pyzbar.pyzbar as pyzbar
+import OrderDecode
 
 
 if sys.version_info.major == 2:
@@ -89,6 +90,8 @@ def set_rgb(color):
 count = {'成都':   0,
     '天津': 0,
     '上海':  0,}  # 放置高度计数
+orderblocks = set()
+orderIDs=set()
 _stop = False
 get_roi = False
 __isRunning = False
@@ -160,8 +163,6 @@ def exit():
     _stop = True
     __isRunning = False
     print("QRSorting Exit")
-
-
 
 
 # 控制机械臂移动
@@ -334,7 +335,6 @@ def move():
                 endTime=time.perf_counter()
                 print(f"开始抓取到完成用时:{(endTime-startTime)*1000}ms")
 
-
 # 运行子线程
 th = threading.Thread(target=move)
 th.setDaemon(True)#守护线程
@@ -364,11 +364,55 @@ def angle(a, R=10):
         pass
 
 
-def decodeDisplay(image):
+def decodeAllQR(image):
+    """ 识别当前画面所有二维码，存储在orderblocks，订单号存储在orderIDs
+        返回最大二维码方块信息
+    """
+    global orderblocks
+    global orderIDs
+    barcodes = pyzbar.decode(image)
+    num=len(barcodes)
+    data = []
+    box=None
+    rect=None
+    if not barcodes:
+        print('No barcode found.')
+        time.sleep(1)
+        return
+    for barcode in barcodes:
+        # 计算二维码轮廓面积
+        area = barcode.rect.width * barcode.rect.height
+        # 如果当前二维码面积更大，则记录下该二维码
+        if area > max_area:
+            max_area = area
+            max_barcode = barcode
+        
+        orderID = barcode.data.decode("utf-8")
+        orderIDs.add(orderID)
+        # 找到二维码的最小边框位置
+        rect = cv2.minAreaRect(np.array(barcode.polygon, np.int32))
+        box = cv2.boxPoints(rect)
+        box = np.int0(box)
+        #存取方块信息rect、box，用于计算位置
+        orderblocks.add(orderID,box,rect)
+    if max_barcode is not None:
+        # 输出二维码信息
+        # 找到二维码的最小边框位置
+        max_rect = cv2.minAreaRect(np.array(max_barcode.polygon, np.int32))
+        box = cv2.boxPoints(max_rect)
+        box = np.int0(box)
+    (x, y, w, h) = max_barcode.rect
+    barcodeData = max_barcode.data.decode("utf-8")
+    data.append([x, y, w, h, barcodeData])
+    return image,box,max_rect, data
+
+
+def decodeMaxQR(image):
     """ 
-    识别当前所有二维码，返回最大二维码的值
+    存储，返回最大二维码的值
     """
     global last_text
+    global orderIDs
     barcodes = pyzbar.decode(image)
     num=len(barcodes)
     data = []
@@ -390,6 +434,7 @@ def decodeDisplay(image):
         if area > max_area:
             max_area = area
             max_barcode = barcode
+            
     # 如果找到了最大面积的二维码，则输出二维码信息和边框位置
     if max_barcode is not None:
         # 输出二维码信息
@@ -402,7 +447,7 @@ def decodeDisplay(image):
     data.append([x, y, w, h, barcodeData])
     endTime=time.perf_counter()
     print(f'识别二维码时间为:{(endTime-startTime)*1000}ms')
-    # orderIDs=[]
+    # 
     # for barcode in barcodes:
     #     orderID = barcode.data.decode("utf-8")
     #     (x, y, w, h) = barcode.rect
@@ -497,7 +542,7 @@ def QRcode_sort_debug():
             img = frame.copy()
             # 检测图像中的二维码内容,仅限一个
             if text=='null':
-                img,box, rect,data = decodeDisplay(img)
+                img,box, rect,data = decodeMaxQR(img)
             else:
                 img=img
                 box=None
@@ -553,7 +598,6 @@ def QRcode_sort_debug():
                             else:
                                 detect_block = 'None'
                             # return text
-                        
             else:
                 if start_pick_up and not start_pick_down:
                     #画面中无二维码且未抓取到
@@ -600,7 +644,7 @@ def run(frame):
     if text!='null':
         return img
     # 检测图像中的二维码内容,仅限一个
-    img,box, rect,data = decodeDisplay(img)
+    img,box, rect,data = decodeMaxQR(img)
     # 计算出二维码的位置和盒子位置
     if rect is not None:
         if box is not None:
