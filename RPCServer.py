@@ -162,7 +162,6 @@ def SetBrushMotor(*args, **kwargs):
     return ret
 
 
-
 #获取电池电压
 @dispatcher.add_method
 def GetBatteryVoltage():

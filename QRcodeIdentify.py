@@ -95,7 +95,7 @@ orderIDs=set()
 _stop = False
 get_roi = False
 __isRunning = False
-detect_block = 'None'
+destination = 'None'
 start_pick_up = False  # 为true时抓取方块
 pick_up=False
 start_pick_down = False  # 为true时放置方块，均为false时恢复初始状态
@@ -107,7 +107,7 @@ rotation_angle = 0
 unreachable = False  # 判断是否能够抓取
 reachtime = 0  # 抵达指定位置的时间
 catchtime = 0  # 抓取的时间
-text='null'
+cur_orderid='null'
 state=0
 last_text='null'
 world_X, world_Y = 0, 0
@@ -116,7 +116,7 @@ def reset():
     global _stop
     global count
     global get_roi
-    global detect_block
+    global destination
     global start_pick_up
     global start_pick_down
     global pick_up
@@ -127,7 +127,7 @@ def reset():
     '上海':  0,} 
     _stop = False
     get_roi = False
-    detect_block = 'None'
+    destination = 'None'
     start_pick_up = False
     pick_up=False
     start_pick_down = False
@@ -172,9 +172,9 @@ def move():
     global move_square
     global __isRunning
     global unreachable
-    global detect_block
+    global destination
     global count
-    global text
+    global cur_orderid
     global start_pick_up
     global start_pick_down
     global pick_up
@@ -185,25 +185,25 @@ def move():
     while True:
         if __isRunning:
             startTime=0
-            print("detect_block=%s" %(detect_block))
+            print("detect_block=%s" %destination)
             get_it=False
             count_num=0
             while not get_it:
                 startTime=time.perf_counter()
-                if detect_block != 'None' and start_pick_up:  
+                if destination != 'None' and start_pick_up:  
                     # 如果抓取2次后还未抓取成功，则清空识别记录重新识别
                     if count_num>1:
-                        text='null'
+                        cur_orderid='null'
                         start_pick_up=False
                         start_pick_down=False
-                        detect_block = 'None'
+                        destination = 'None'
                         initMove()
                         break
-                    set_rgb(detect_block)
+                    set_rgb(destination)
                     # setBuzzer(0.1)
                     # reachtime = 0.0
                     # 高度累加
-                    print(detect_block)
+                    print(destination)
 
                     print("move to world_X=%d"%(world_X) +"and world_Y=%d"%(world_Y))
                     result = AK.setPitchRangeMoving(
@@ -252,10 +252,10 @@ def move():
                         if servo1_now>= 490:
                             print("don't get it")
                             count_num+=1
-                            if text=="null":
+                            if cur_orderid=="null":
                                 start_pick_up=False
                                 start_pick_down=False
-                                detect_block = 'None'
+                                destination = 'None'
                                 initMove()
                             continue
                         else: 
@@ -268,27 +268,30 @@ def move():
                         print("机械臂抬起")
                 else:
                     get_it=False
-            if detect_block=='None':
+            if destination=='None':
                 time.sleep(1)
                 continue
             put_it=False
-            while (not put_it and text!='null'):
-                if detect_block!='None'and start_pick_down:
-                    print("机械臂开始放下 detect_block=%s"%(detect_block))
+            while (not put_it and cur_orderid!='null'):
+                # 删除订单信息
+                orderIDs.remove(cur_orderid)
+                orderblocks.remove(cur_orderid)
+                if destination!='None'and start_pick_down:
+                    print("机械臂开始放下 detect_block=%s"%destination)
                     pick_up=False
                     start_pick_up=False
                     if not __isRunning:
                         continue
-                    print(detect_block)
+                    print(destination)
                     result=AK.setPitchRangeMoving(
-                        (coordinate[detect_block][0], coordinate[detect_block][1], 12), -90, -90, 0,1000)
+                        (coordinate[destination][0], coordinate[destination][1], 12), -90, -90, 0,1000)
                     time.sleep(result[2]/1000)
                     print(result)
 
                     if not __isRunning:
                         continue
                     result=AK.setPitchRangeMoving(
-                        (coordinate[detect_block][0], coordinate[detect_block][1], coordinate[detect_block][2]+count[detect_block]), -90, -90, 0,1000)
+                        (coordinate[destination][0], coordinate[destination][1], coordinate[destination][2]+count[destination]), -90, -90, 0,1000)
                     time.sleep(result[2]/1000)
                     print(result)
                     if not result:
@@ -297,7 +300,7 @@ def move():
                     if not __isRunning:
                         continue
                     #旋转角度放下
-                    servo2_angle = getAngle(coordinate[detect_block][0], coordinate[detect_block][1], -90)
+                    servo2_angle = getAngle(coordinate[destination][0], coordinate[destination][1], -90)
                     Board.setBusServoPulse(2, servo2_angle, 300)
                     time.sleep(0.3)
 
@@ -306,21 +309,21 @@ def move():
                     Board.setBusServoPulse(1, servo1 - 200, 300)  # 爪子张开  ，放下物体
                     time.sleep(0.3)
                     put_it=True
-                    n=count[detect_block]
-                    count[detect_block]=n+1
-                    print("num %s"%(detect_block)+"=%d"%(n+1))
+                    n=count[destination]
+                    count[destination]=n+1
+                    print("num %s"%destination+"=%d"%(n+1))
 
                     if not __isRunning:
                         continue
                     result=AK.setPitchRangeMoving(
-                        (coordinate[detect_block][0], coordinate[detect_block][1], 12), -90, -90, 0,500)
+                        (coordinate[destination][0], coordinate[destination][1], 12), -90, -90, 0,500)
                     time.sleep(result[2]/1000)
-                    detect_block = 'None'
+                    destination = 'None'
                     get_roi = False
                     start_pick_up = False
                     start_pick_down=False
-                    text='null'
-                    set_rgb(detect_block)
+                    cur_orderid='null'
+                    set_rgb(destination)
                     initMove()  # 回到初始位置
                 else:
                     put_it=False
@@ -404,7 +407,7 @@ def decodeAllQR(image):
     (x, y, w, h) = max_barcode.rect
     barcodeData = max_barcode.data.decode("utf-8")
     data.append([x, y, w, h, barcodeData])
-    return image,box,max_rect, data
+    return image,box,max_rect,data
 
 
 def decodeMaxQR(image):
@@ -466,10 +469,10 @@ def Heartbeat(alive):
     global start_pick_up
     global start_pick_down
     global pick_up
-    global text
+    global cur_orderid
     global state
     # print('func Heartbeat()',alive)
-    if text=='null':
+    if cur_orderid=='null':
         state=0
         return (True,(0))
     elif alive:
@@ -493,42 +496,42 @@ def Heartbeat(alive):
         return (True,(4))
 
 def setTarget(target_color):
-    global detect_block
-    global text
+    global destination
+    global cur_orderid
     global last_text
     global start_pick_up
     global start_pick_down
-    print("func setTarget() started target_color=%s"%(target_color)+" text=%s"%(text))
+    print("func setTarget() started target_color=%s"%(target_color)+" text=%s"%cur_orderid)
     # RPC GetOrderId()方法
     if target_color=='double':
         #重复订单,重新识别
-        last_text=text
-        detect_block='None'
+        last_text=cur_orderid
+        destination='None'
         start_pick_up=False
         start_pick_down=False
-        return (True,(text))
+        return (True,cur_orderid)
     if target_color=='None':
-        return (True,(text))
+        return (True,cur_orderid)
     else:
         print("COLOR", target_color)
-        if text!='null':
+        if cur_orderid!='null':
             start_pick_down=True
             if type(target_color) == tuple:
-                detect_block=target_color[0]
+                destination=target_color[0]
             else:
-                detect_block=target_color
-            print("detect_block", detect_block)
+                destination=target_color
+            print("detect_block", destination)
         else:
             start_pick_down=False
-        return (True, (text))
+        return (True, cur_orderid)
     
 def QRcode_sort_debug():
     print('func QRcode_sort() started')
-    global detect_block
+    global destination
     global rotation_angle
     global start_pick_up
     global start_pick_down
-    global text
+    global cur_orderid
     global get_roi
     global world_X, world_Y
 
@@ -541,7 +544,7 @@ def QRcode_sort_debug():
         if frame is not None:
             img = frame.copy()
             # 检测图像中的二维码内容,仅限一个
-            if text=='null':
+            if cur_orderid=='null':
                 img,box, rect,data = decodeMaxQR(img)
             else:
                 img=img
@@ -574,34 +577,34 @@ def QRcode_sort_debug():
                         # return (True,('None'))                    
                         if len(data) != 0:
                             # 在frame上显示识别内容
-                            text = data[0][4]
-                            cv2.putText(frame, text, (data[0][0], data[0][1] - 10), cv2.FONT_HERSHEY_SIMPLEX,.5, (0, 0, 125), 2)
+                            cur_orderid = data[0][4]
+                            cv2.putText(frame, cur_orderid, (data[0][0], data[0][1] - 10), cv2.FONT_HERSHEY_SIMPLEX,.5, (0, 0, 125), 2)
                             # xx, yy = convertCoordinate(
                             #     data[0][0], data[0][1], size)
                             # print(xx, yy)
                             # 检测到特定二维码内容时才会抓取
                             if data[0][4] == '000000004' or data[0][4]=='000000019':
-                                detect_block = '上海'
+                                destination = '上海'
                                 start_pick_up = True
                                 start_pick_down=True
                                 # coordinate['上海'] = (xx+2, yy+5, 12)
                             elif data[0][4] == '100000020' or data[0][4]=='000000009':
-                                detect_block = '成都'
+                                destination = '成都'
                                 start_pick_up = True
                                 start_pick_down=True
                                 # coordinate['成都'] = (xx+2, yy+5, 12)
                             elif data[0][4] == '000000003'or data[0][4]=='000000005':
-                                detect_block = '天津'
+                                destination = '天津'
                                 start_pick_up = True
                                 start_pick_down=True
                                 # coordinate['天津'] = (xx+2, yy+5, 12)
                             else:
-                                detect_block = 'None'
+                                destination = 'None'
                             # return text
             else:
                 if start_pick_up and not start_pick_down:
                     #画面中无二维码且未抓取到
-                    text='null'
+                    cur_orderid='null'
                     start_pick_up=False
                     start_pick_down=False
             # img = run(img)
@@ -625,23 +628,23 @@ def run(frame):
     global move_square
     global __isRunning
     global unreachable
-    global detect_block
+    global destination
     global count
-    global text
+    global cur_orderid
     global state
     global last_text
     global start_pick_up
     global rotation_angle
     global world_X, world_Y
     global z_r, z_g, z_b, z
-    print('func run() started text=%s'%(text)+' state=%d'%(state))
+    print('func run() started text=%s'%cur_orderid+' state=%d'%(state))
     if frame is not None:
         img=frame.copy()
         cv2.imshow('img', frame)
     else:
         print("no frame")
         return
-    if text!='null':
+    if cur_orderid!='null':
         return img
     # 检测图像中的二维码内容,仅限一个
     img,box, rect,data = decodeMaxQR(img)
@@ -659,7 +662,7 @@ def run(frame):
             print("world_X= %d" % (world_X)+" world_Y=%d" % (world_Y))
             
             if len(data) != 0 :
-                text = data[0][4]
+                cur_orderid = data[0][4]
             state=4
     cv2.imshow('frame', frame)
     return img

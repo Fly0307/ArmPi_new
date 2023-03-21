@@ -44,8 +44,8 @@ def world2pixel(l, size):
     return l_
 
 # 获取检测物体的roi区域
-# 传入cv2.boxPoints(rect)返回的四个顶点的值，返回极值点
 def getROI(box):
+    """ 传入cv2.boxPoints(rect)返回的四个顶点的值，返回极值点 """
     x_min = min(box[0, 0], box[1, 0], box[2, 0], box[3, 0])
     x_max = max(box[0, 0], box[1, 0], box[2, 0], box[3, 0])
     y_min = min(box[0, 1], box[1, 1], box[2, 1], box[3, 1])

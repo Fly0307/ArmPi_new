@@ -37,16 +37,13 @@ func run() started text=100000020 state=4
 func run() started text=100000020 state=4
 func run() started text=100000020 state=4
 b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 1670800050944}'
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
 func run() started text=100000020 state=1
 b'{"method": "GetOrderId", "params": [], "jsonrpc": "2.0", "id": 1745345516495}'
 GetOrderId()
 func setTarget() started target_color=None text=100000020
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
+
 b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 6537985275186}'
 CargoPlacement(*target_pos)
 func setTarget() started target_color=天津 text=100000020
@@ -55,161 +52,27 @@ detect_block 天津
 天津
 move to world_X=2and world_Y=26
 (2.0, 26.21, 7)
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 Servo3-abs=27
-func run() started text=100000020 state=1
-Servo4-abs=381
-func run() started text=100000020 state=1
 Servo5-abs=482
 Servo6-abs=20
 newmovetime=482,movetime=1500
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 预计运行时间1500ms,实际运行时间502ms
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 (2.0, 26.21, 5)
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-Servo3-abs=11
-Servo4-abs=1
-Servo5-abs=5
-func run() started text=100000020 state=1
-Servo6-abs=3
 newmovetime=11,movetime=1000
 func run() started text=100000020 state=1
 预计运行时间1000ms,实际运行时间31ms
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 (2.0, 26.21, 1.5)
 func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-Servo3-abs=19
-Servo4-abs=7
-func run() started text=100000020 state=1
-Servo5-abs=25
-Servo6-abs=2
-newmovetime=25,movetime=500
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-预计运行时间500ms,实际运行时间45ms
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 (2.0, 26.21, 9)
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-Servo3-abs=5
-Servo4-abs=0
-Servo5-abs=79
-func run() started text=100000020 state=1
-Servo6-abs=2
 newmovetime=79,movetime=1000
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 func run() started text=100000020 state=1
 预计运行时间1000ms,实际运行时间99ms
 (0, 10, 12)
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 Servo3-abs=120
-func run() started text=100000020 state=1
 Servo4-abs=207
 Servo5-abs=356
 Servo6-abs=16
 newmovetime=356,movetime=1000
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-b'{"method": "ArmHeartbeat", "params": [false], "jsonrpc": "2.0", "id": 3173939989998}'
-func run() started text=100000020 state=1
-b'{"method": "ArmHeartbeat", "params": [true], "jsonrpc": "2.0", "id": 7522449881795}'
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
 预计运行时间1000ms,实际运行时间376ms
 机械臂抬起
 机械臂开始放下 detect_block=天津
@@ -227,36 +90,25 @@ Servo5-abs=121
 func run() started text=100000020 state=1
 Servo6-abs=387
 newmovetime=387,movetime=1000
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
 b'{"method": "CargoPlacement", "params": ["\\u5929\\u6d25"], "jsonrpc": "2.0", "id": 5296895041758}'
 CargoPlacement(*target_pos)
 func setTarget() started target_color=天津 text=100000020
 COLOR ('天津',)
 detect_block 天津
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
+
+
+
+
+
+
+
+
 预计运行时间1000ms,实际运行时间407ms
 ({'servo3': 67, 'servo4': 693, 'servo5': 542, 'servo6': 883}, -50, 407)
 (-14.5, -0.5, 2)
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
 Servo3-abs=6
 func run() started text=100000020 state=1
 Servo4-abs=9
@@ -264,54 +116,33 @@ func run() started text=100000020 state=1
 Servo5-abs=152
 Servo6-abs=8
 newmovetime=152,movetime=1000
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
+
+
+
 func run() started text=100000020 state=1
 预计运行时间1000ms,实际运行时间172ms
 ({'servo3': 68, 'servo4': 696, 'servo5': 386, 'servo6': 883}, -88, 172)
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 func run() started text=100000020 state=1
 num 天津=1
 (-14.5, -0.5, 12)
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
 Servo3-abs=1
 Servo4-abs=7
 func run() started text=100000020 state=1
@@ -319,16 +150,11 @@ Servo5-abs=163
 func run() started text=100000020 state=1
 Servo6-abs=1
 newmovetime=163,movetime=500
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
-func run() started text=100000020 state=1
+
+
+
+
+
 预计运行时间500ms,实际运行时间183ms
 QR initmove()
 (0, 10, 10)
