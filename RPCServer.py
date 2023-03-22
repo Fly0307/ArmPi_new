@@ -6,6 +6,7 @@ import Functions.Running as Running
 import HiwonderSDK.Board as Board
 from ArmIK.ArmMoveIK import *
 from jsonrpc import JSONRPCResponseManager, dispatcher
+import jsonrpc
 from werkzeug.serving import run_simple
 from werkzeug.wrappers import Request, Response
 import QRcodeIdentify
@@ -268,4 +269,6 @@ def startRPCServer():
 
 
 if __name__ == '__main__':
+    print(jsonrpc.__version__)
     startRPCServer()
+    

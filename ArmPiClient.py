@@ -1,9 +1,9 @@
 import cv2
 import time
-import Camera
 import threading
 import sys
-import RPCClient
+from RPCClient import *
+from Camera import *
 
 sys.path.append("/home/pi/ArmPi/")
 # sys.path.append('/home/pi/.local/lib/python3.7/site-packages')
@@ -35,7 +35,7 @@ servo1 = 500
 
 ArmPi_id = 0
 destination = None
-
+cur_orderid = None
 # 放置高度计数
 count = {
     "成都": 0,
@@ -389,17 +389,24 @@ def run():
     global world_X, world_Y
     global ArmPi_id
 
-    camera = Camera()
-
+    # camera = Camera()
+    # camera.camera_open()
     cur_orderid = None
+    my_camera = Camera()
+    my_camera.camera_open()
+    time.sleep(1)
     while True:
+        img = my_camera.frame
+        if img is not None:
+            cv2.imshow('img', img)    
+
+    # while True:
         if cur_orderid is not None:
             time.sleep(0.5)
             continue
-        frame = camera.img
-        if frame is not None:
-            img = frame.copy()
-            cv2.imshow("img", frame)
+        if img is not None:
+            # img = frame.copy()
+            cv2.imshow("img", img)
         else:
             print("no frame")
             break
@@ -409,7 +416,8 @@ def run():
         img, box, rect, data = decodeMaxQR(img)
         en_time = time.perf_counter()
         print(f"识别更新画面中所有二维码花费时间{(en_time-strat_time)*1000}")
-        res = rpcclient.call("Add_OrderIDs", orderIDs)  # 发送订单号准备查询
+        order_lists=list(orderIDs)
+        res = rpcclient.call("Add_OrderIDs", order_lists)  # 发送订单号准备查询
         orderIDs.clear()
 
         # 计算出二维码（方块）的位置
@@ -430,21 +438,31 @@ def run():
                     cur_orderid = data[0][4]
 
                 # 获取订单地址
-                res = rpcclient.call("Get_Adress", [ArmPi_id, cur_orderid])
-                destination = res[1]
+                res=None
+                cnt=0
+                while res==None:
+                    res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+                    cnt+=1
+                    if cnt>5:
+                        break
+                
+                print(f"res={res}")
                 if res[0] and (destination == None):
+                    destination = res[1]
                     cur_orderid = None
                     continue
 
-            cv2.imshow("frame", frame)
+            cv2.imshow("frame", img)
         else:
-            cv2.imshow("frame", frame)
+            cv2.imshow("frame", img)
             time.sleep(1)
-
+    my_camera.camera_close()
+    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     # 运行子线程
-    th = threading.Thread(target=move)
-    th.setDaemon(True)  # 守护线程
-    th.start()
+    # th = threading.Thread(target=move)
+    # th.setDaemon(True)  # 守护线程
+    # th.start()
     run()
+    

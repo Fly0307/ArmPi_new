@@ -1,0 +1,10 @@
+识别二维码时间为:0.4625170004146639ms
+识别更新画面中所有二维码花费时间80.59397000033641
+world_X= 2 world_Y=21
+res=None
+Traceback (most recent call last):
+  File "ArmPiClient.py", line 467, in <module>
+    run()
+  File "ArmPiClient.py", line 450, in run
+    if res[0] and (destination == None):
+TypeError: 'NoneType' object is not subscriptable
