@@ -74,11 +74,11 @@ class ArmIK:
         # print(f'servos{servos}')
         for i in  range(0, 4):
             d = abs(getBusServoPulse(i + 3) - servos[i])
-            print(f'Servo{i+3}-abs={d}')
+            # print(f'Servo{i+3}-abs={d}')
             if d > max_d:
                 max_d = d
         newmovetime = int(max_d)
-        print(f'newmovetime={newmovetime},movetime={movetime}')
+        # print(f'newmovetime={newmovetime},movetime={movetime}')
         if(movetime==None):
             movetime=newmovetime
         else:
@@ -116,7 +116,7 @@ class ArmIK:
         #alpha为给定俯仰角
         #alpha1和alpha2为俯仰角的取值范围
         #movetime为舵机转动时间，单位ms, 如果不给出时间，则自动计算
-        print(coordinate_data)
+        # print(coordinate_data)
         x, y, z = coordinate_data
         result1 = self.setPitchRange((x, y, z), alpha, alpha1)
         result2 = self.setPitchRange((x, y, z), alpha, alpha2)
@@ -134,7 +134,7 @@ class ArmIK:
 
         newmovetime = self.servosMove((servos["servo3"], servos["servo4"], servos["servo5"], servos["servo6"]), movetime)
         # time.sleep(newmovetime/1000)
-        print(f'预计运行时间{movetime}ms,实际运行时间{newmovetime}ms')
+        # print(f'预计运行时间{movetime}ms,实际运行时间{newmovetime}ms')
         return servos, alpha, newmovetime
     '''
     #for test

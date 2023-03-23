@@ -1,0 +1,7 @@
+No barcode found.
+Traceback (most recent call last):
+  File "ArmPiClient.py", line 506, in <module>
+    run()
+  File "ArmPiClient.py", line 450, in run
+    img, cur_orderBlock = decodeAllQR(frame)
+TypeError: cannot unpack non-iterable NoneType object

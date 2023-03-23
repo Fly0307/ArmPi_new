@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
-sys.path.append('/home/pi/ArmPi_client//Tool/HiwonderSDK/')
+sys.path.append('/home/pi/ArmPi/HiwonderSDK/')
 import time
 import RPi.GPIO as GPIO
 from BusServoCmd import *
@@ -297,7 +297,7 @@ def getBusServoPulse(id):
     while True:
         serial_servo_read_cmd(id, LOBOT_SERVO_POS_READ)
         msg = serial_servo_get_rmsg(LOBOT_SERVO_POS_READ)
-        print(msg)
+        # print(msg)
         if msg is not None:
             return msg
         

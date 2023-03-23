@@ -101,8 +101,8 @@ def move():
     global rpcclient
     global count
     global cur_orderid
-    global start_pick_up
-    global start_pick_down
+    # global start_pick_up
+    # global start_pick_down
     global pick_up
     global rotation_angle
     global world_X, world_Y
@@ -112,7 +112,7 @@ def move():
     while True:
         startTime = 0
         if cur_orderid == None:
-            time.sleep(0.1)
+            time.sleep(0.01)
             continue
 
         print(f"detect_block={destination}")
@@ -120,13 +120,16 @@ def move():
         count_num = 0
         while not get_it:
             startTime = time.perf_counter()
-            if destination is not None and start_pick_up:
+            if destination is not None:
                 # 如果抓取2次后还未抓取成功，则清空识别记录重新识别
                 if count_num > 1:
-                    cur_orderid = None
-                    start_pick_up = False
-                    start_pick_down = False
-                    destination = None
+                    # start_pick_up = False
+                    # start_pick_down = False
+                    if(cur_orderid in orderIDs):
+                        orderIDs.remove(cur_orderid)
+                    delete_order(cur_orderid)
+                    cur_orderid=None
+                    destination=None
                     initMove()
                     break
                 # setBuzzer(0.1)
@@ -140,15 +143,13 @@ def move():
                     unreachable = True
                 else:
                     unreachable = False
-                    # if not __isRunning:
-                    #     continue
+                    
                     # 计算夹持器需要旋转的角度
                     servo2_angle = getAngle(world_X, world_Y, rotation_angle)
                     Board.setBusServoPulse(2, servo2_angle, 300)  # 旋转爪子
                     time.sleep(0.3)
 
-                    # if not __isRunning:
-                    #     continue
+                    
                     result = AK.setPitchRangeMoving(
                         (world_X, world_Y, 5), -90, -90, 0, 1000
                     )  # 降低高度到4cm
@@ -157,20 +158,17 @@ def move():
                         print("can't reach")
                     Board.setBusServoPulse(1, servo1 - 280, 300)  # 爪子张开
                     time.sleep(0.3)
-                    # if not __isRunning:
-                    #     continue
+                    
                     result = AK.setPitchRangeMoving(
                         (world_X, world_Y, 1.5), -90, -90, 0, 500
                     )  # 降低高度到2cm
                     time.sleep(result[2] / 1000)
 
-                    # if not __isRunning:
-                    #     continue
+                    
                     Board.setBusServoPulse(1, servo1, 300)  # 夹持器闭合
                     time.sleep(0.3)
 
-                    # if not __isRunning:
-                    #     continue
+                    
                     Board.setBusServoPulse(2, 500, 300)
                     result = AK.setPitchRangeMoving(
                         (world_X, world_Y, 9), -90, -90, 0, 1000
@@ -183,8 +181,8 @@ def move():
                         print("don't get it")
                         count_num += 1
                         if cur_orderid == None:
-                            start_pick_up = False
-                            start_pick_down = False
+                            # start_pick_up = False
+                            # start_pick_down = False
                             destination = None
                             initMove()
                         continue
@@ -195,26 +193,26 @@ def move():
                     )  # 机械臂抬起
                     time.sleep(result[2] / 1000)
                     pick_up = True
-                    start_pick_up = False
+                    # start_pick_up = False
                     print("机械臂抬起")
             else:
                 get_it = False
+                
         if destination == None:
-            time.sleep(1)
+            time.sleep(0.01)
             continue
         res = rpcclient.call("Update_state", ArmPi_id)
-        put_it = False
         while get_it and cur_orderid is not None:
             # 删除订单信息
             orderIDs.remove(cur_orderid)
             delete_order(cur_orderid)
-            if destination is not None and start_pick_down:
+            if destination is not None:
                 print("机械臂开始放下 detect_block=%s" % destination)
                 pick_up = False
-                start_pick_up = False
+                # start_pick_up = False
                 # if not __isRunning:
                 #     continue
-                print(destination)
+                print(f"destination={destination}")
                 result = AK.setPitchRangeMoving(
                     (coordinate[destination][0], coordinate[destination][1], 12),
                     -90,
@@ -272,9 +270,11 @@ def move():
                 )
                 time.sleep(result[2] / 1000)
                 destination = None
-                get_roi = False
-                start_pick_up = False
-                start_pick_down = False
+                # get_roi = False
+                # start_pick_up = False
+                # start_pick_down = False
+                # orderIDs.remove(cur_orderid)
+                # delete_order(cur_orderid)
                 cur_orderid = None
                 initMove()  # 回到初始位置
             else:
@@ -330,14 +330,14 @@ def decodeAllQR(image):
     if not barcodes:
         print("No barcode found.")
         time.sleep(1)
-        return
+        return image,closest_block
     for barcode in barcodes:
         # 计算二维码轮廓面积
-        area = barcode.rect.width * barcode.rect.height
-        # 如果当前二维码面积更大，则记录下该二维码
-        if area > max_area:
-            max_area = area
-            max_barcode = barcode
+        # area = barcode.rect.width * barcode.rect.height
+        # # 如果当前二维码面积更大，则记录下该二维码
+        # if area > max_area:
+        #     max_area = area
+        #     max_barcode = barcode
 
         orderID = barcode.data.decode("utf-8")
         orderIDs.add(orderID)
@@ -357,13 +357,33 @@ def decodeAllQR(image):
                 world_x, world_y = convertCoordinate(
                     img_centerx, img_centery, size
                 )  # 转换为现实世界坐标
-                print("world_X= %d" % (world_x) + " world_Y=%d" % (world_y))
+                print("x= %d" % (world_x) + " Y=%d" % (world_y))
                 insert_order(orderID,(world_x, world_y),rotation_angle)
                 if world_y<min_Y:
                     min_Y=world_y
                     closest_block=[orderID,(world_x, world_y),rotation_angle]
     
     return image, closest_block
+
+def get_orderblock_fromSet():
+    """ 
+    遍历字典找到最近的方块
+    """
+    global orderblocks
+
+    res_orderid=None
+    res_x=None
+    res_y=100
+    res_angle=None
+    if len(orderblocks):
+        for orderid,(x_y,angle) in orderblocks.items():
+            if x_y[1]<res_y:
+                res_orderid=orderid
+                res_x=x_y[0]
+                res_y=x_y[1]
+                res_angle=angle
+    closest_block=[res_orderid,(res_x, res_y),res_angle]
+    return closest_block
 
 
 def decodeMaxQR(image):
@@ -417,85 +437,106 @@ def run():
     global count
     global rpcclient
     global cur_orderid
-    global start_pick_up
     global rotation_angle
     global world_X, world_Y
     global ArmPi_id
 
-    # camera = Camera()
-    # camera.camera_open()
     cur_orderid = None
+    destination=None
     my_camera = Camera()
     my_camera.camera_open()
     time.sleep(1)
     while True:
-        img = my_camera.frame
-        if img is not None:
-            cv2.imshow('img', img)    
-
-    # while True:
-        if cur_orderid is not None:
-            time.sleep(0.5)
-            continue
-        if img is not None:
-            # img = frame.copy()
-            cv2.imshow("img", img)
+        frame = my_camera.frame
+        if frame is not None:
+            cv2.imshow('frame', frame)
         else:
             print("no frame")
-            break
+            if cur_orderid==None and destination==None:
+                break
+            else:
+                continue
 
-        # 检测图像中的最大二维码
-        strat_time = time.perf_counter()
-        img, box, rect, data = decodeMaxQR(img)
-        en_time = time.perf_counter()
-        print(f"识别更新画面中所有二维码花费时间{(en_time-strat_time)*1000}")
-        order_lists=list(orderIDs)
-        res = rpcclient.call("Add_OrderIDs", order_lists)  # 发送订单号准备查询
-        orderIDs.clear()
-
-        # 计算出二维码（方块）的位置
-        if rect is not None:
-            if box is not None:
-                # 获取方块的现实世界坐标
-                roi = getROI(box)  # 获取极值点
-                img_centerx, img_centery = getCenter(
-                    rect, roi, size, square_length
-                )  # 获取木块中心坐标
-                rotation_angle = rect[2]
-                world_X, world_Y = convertCoordinate(
-                    img_centerx, img_centery, size
-                )  # 转换为现实世界坐标
-                print("world_X= %d" % (world_X) + " world_Y=%d" % (world_Y))
-
-                if len(data) != 0:
-                    cur_orderid = data[0][4]
-
-                # 获取订单地址
-                res=None
-                cnt=0
-                while res==None:
-                    res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
-                    cnt+=1
-                    if cnt>5:
-                        break
-                
-                print(f"res={res}")
-                if res[0] and (destination == None):
-                    destination = res[1]
+        if cur_orderid is not None:
+            time.sleep(0.5)
+            if destination==None:
+                res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+                if res[0] and res[1]["state"]:
+                    destination = res[1]["des"]
                     cur_orderid = None
-                    continue
+            continue
 
-            cv2.imshow("frame", img)
+        
+        strat_time = time.perf_counter()
+        # 优先从orderblocks中读取方块信息
+        if len(orderblocks):
+            cur_orderBlock=get_orderblock_fromSet()
+            if cur_orderBlock[0]==None:
+                time.sleep(1)
+                continue
         else:
-            cv2.imshow("frame", img)
+            # 检测图像中最近的二维码
+            img, cur_orderBlock = decodeAllQR(frame)
+            if cur_orderBlock==None:
+                time.sleep(1)
+                continue
+
+        frame=None
+        en_time = time.perf_counter()
+        print(f"识别更新画面中所有二维码花费时间{(en_time-strat_time)*1000}ms")
+        order_lists=list(orderIDs)
+        res = rpcclient.call("Add_OrderIDs", [order_lists])  # 发送订单号准备查询
+
+        # # 计算出二维码（方块）的位置
+        # if rect is not None:
+        #     if box is not None:
+        #         # 获取方块的现实世界坐标
+        #         roi = getROI(box)  # 获取极值点
+        #         img_centerx, img_centery = getCenter(
+        #             rect, roi, size, square_length
+        #         )  # 获取木块中心坐标
+        #         rotation_angle = rect[2]
+        #         world_X, world_Y = convertCoordinate(
+        #             img_centerx, img_centery, size
+        #         )  # 转换为现实世界坐标
+        #         print("world_X= %d" % (world_X) + " world_Y=%d" % (world_Y))
+
+        if cur_orderBlock !=None:
+            cur_orderid = cur_orderBlock[0]
+            world_X,world_Y=cur_orderBlock[1]
+            rotation_angle=cur_orderBlock[2]
+            print("world_X= %d" % (world_X) + " world_Y=%d" % (world_Y))
+        else:
+            print("world_X=None  world_Y=None" )
+
+        # 获取订单地址,5次超时
+        res=None
+        cnt=0
+        while res==None:
+            res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+            cnt+=1
+            if cnt>5:
+                break
+        
+        print(f"res={res},destination={destination}")
+        if res[0] and res[1]["state"] and (destination == None):
+            destination = res[1]["des"]
+            # cur_orderid = None
+            print(f"destination={destination},cur_orderid={cur_orderid}")
+            cv2.imshow("img", img)
+            continue
+        else:
+            cv2.imshow("img", img)
             time.sleep(1)
+    print("over*******************")
     my_camera.camera_close()
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     # 运行子线程
-    # th = threading.Thread(target=move)
-    # th.setDaemon(True)  # 守护线程
-    # th.start()
+    initMove()
+    th = threading.Thread(target=move)
+    th.setDaemon(True)  # 守护线程
+    th.start()
     run()
     
