@@ -23,3 +23,5 @@ class Order:
 # orders.remove(existing_order)
 # existing_order.rect = (0, 0)
 # orders.add(existing_order)
+# 定义函数，实现对订单的查询、插入、更新和删除功能
+

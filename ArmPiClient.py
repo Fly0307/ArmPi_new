@@ -43,8 +43,35 @@ count = {
     "上海": 0,
 }
 
-orderblocks = set()
+orderblocks = {}
 orderIDs = set()
+
+
+def query_order(orderid):
+    global orderblocks
+    if orderid in orderblocks:
+        return orderblocks[orderid]
+    else:
+        return None
+
+def insert_order(orderid, position, angle):
+    global orderblocks
+    orderblocks[orderid] = (position, angle)
+
+def update_order(orderid, position, angle):
+    global orderblocks
+    if orderid in orderblocks:
+        orderblocks[orderid] = (position, angle)
+    else:
+        print("Order not found.")
+
+def delete_order(orderid):
+    global orderblocks
+    if orderid in orderblocks:
+        del orderblocks[orderid]
+    else:
+        print("Order not found.")
+
 
 
 def initMove():
@@ -180,7 +207,7 @@ def move():
         while get_it and cur_orderid is not None:
             # 删除订单信息
             orderIDs.remove(cur_orderid)
-            orderblocks.remove(cur_orderid)
+            delete_order(cur_orderid)
             if destination is not None and start_pick_down:
                 print("机械臂开始放下 detect_block=%s" % destination)
                 pick_up = False
@@ -298,9 +325,8 @@ def decodeAllQR(image):
     global orderIDs
     barcodes = pyzbar.decode(image)
     num = len(barcodes)
-    data = []
-    box = None
-    rect = None
+    closest_block=None
+    min_Y=100
     if not barcodes:
         print("No barcode found.")
         time.sleep(1)
@@ -319,18 +345,25 @@ def decodeAllQR(image):
         rect = cv2.minAreaRect(np.array(barcode.polygon, np.int32))
         box = cv2.boxPoints(rect)
         box = np.int0(box)
-        # 存取方块信息rect、box，用于计算位置
-        orderblocks.add(orderID, box, rect)
-    if max_barcode is not None:
-        # 输出二维码信息
-        # 找到二维码的最小边框位置
-        max_rect = cv2.minAreaRect(np.array(max_barcode.polygon, np.int32))
-        box = cv2.boxPoints(max_rect)
-        box = np.int0(box)
-    (x, y, w, h) = max_barcode.rect
-    barcodeData = max_barcode.data.decode("utf-8")
-    data.append([x, y, w, h, barcodeData])
-    return image, box, max_rect, data
+        #获取方块对应的中心x、y坐标
+        if rect is not None:
+            if box is not None:
+                # 获取方块的现实世界坐标
+                roi = getROI(box)  # 获取极值点
+                img_centerx, img_centery = getCenter(
+                    rect, roi, size, square_length
+                )  # 获取木块中心坐标
+                rotation_angle = rect[2]
+                world_x, world_y = convertCoordinate(
+                    img_centerx, img_centery, size
+                )  # 转换为现实世界坐标
+                print("world_X= %d" % (world_x) + " world_Y=%d" % (world_y))
+                insert_order(orderID,(world_x, world_y),rotation_angle)
+                if world_y<min_Y:
+                    min_Y=world_y
+                    closest_block=[orderID,(world_x, world_y),rotation_angle]
+    
+    return image, closest_block
 
 
 def decodeMaxQR(image):
