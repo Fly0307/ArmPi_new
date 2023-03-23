@@ -137,10 +137,10 @@ def serial_servo_get_rmsg(cmd):
     portRead()  # 将单线串口配置为输入
     time.sleep(0.005)  # 稍作延时，等待接收完毕
     count = serialHandle.inWaiting()    # 获取接收缓存中的字节数
-    print(f'count={count}')
+    # print(f'count={count}')
     if count != 0:  # 如果接收到的数据不空
         recv_data = serialHandle.read(count)  # 读取接收到的数据
-        print(f"recv_data{recv_data}")
+        # print(f"recv_data{recv_data}")
         # for i in recv_data:
         #     print('%#x' %ord(i))
         # 是否是读id指令

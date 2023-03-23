@@ -519,6 +519,11 @@ def run():
                 break
         
         print(f"res={res},destination={destination}")
+        while(res[0] and res[1]["state"]==False):
+            time.sleep(0.005)
+            res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+
+
         if res[0] and res[1]["state"] and (destination == None):
             destination = res[1]["des"]
             # cur_orderid = None
