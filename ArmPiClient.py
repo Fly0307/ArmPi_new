@@ -522,10 +522,15 @@ def run():
         while(res[0] and res[1]["state"]==False):
             time.sleep(0.005)
             res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+            print(f"res={res}")
 
 
         if res[0] and res[1]["state"] and (destination == None):
             destination = res[1]["des"]
+            if(destination==None):
+                del orderblocks[cur_orderid]
+                orderIDs.remove(cur_orderid)
+                cur_orderid=None
             # cur_orderid = None
             print(f"destination={destination},cur_orderid={cur_orderid}")
             cv2.imshow("img", img)
