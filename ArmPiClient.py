@@ -33,7 +33,7 @@ size = (640, 480)  # 设置采集图片(流)大小
 # 夹持器夹取时闭合的角度
 servo1 = 500
 
-ArmPi_id = 0
+ArmPi_id = 2
 destination = None
 cur_orderid = None
 # 放置高度计数
@@ -357,7 +357,7 @@ def decodeAllQR(image):
                 world_x, world_y = convertCoordinate(
                     img_centerx, img_centery, size
                 )  # 转换为现实世界坐标
-                print("x= %d" % (world_x) + " Y=%d" % (world_y))
+                print(f"orderid={orderID} x={world_x} y={world_y}")
                 insert_order(orderID,(world_x, world_y),rotation_angle)
                 if world_y<min_Y:
                     min_Y=world_y
@@ -457,14 +457,14 @@ def run():
             else:
                 continue
 
-        if cur_orderid is not None:
-            time.sleep(0.5)
-            if destination==None:
-                res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
-                if res[0] and res[1]["state"]:
-                    destination = res[1]["des"]
-                    cur_orderid = None
-            continue
+        # if cur_orderid is not None:
+        #     time.sleep(0.5)
+        #     if destination==None:
+        #         res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+        #         if res[0] and res[1]["state"]:
+        #             destination = res[1]["des"]
+        #             cur_orderid = None
+        #     continue
 
         
         strat_time = time.perf_counter()
@@ -512,17 +512,17 @@ def run():
         # 获取订单地址,5次超时
         res=None
         cnt=0
-        while res==None:
-            res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
-            cnt+=1
-            if cnt>5:
-                break
+        # if res==None:
+            # res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+            # cnt+=1
+            # if cnt>5:
+            #     break
         
-        print(f"res={res},destination={destination}")
-        while(res[0] and res[1]["state"]==False):
-            time.sleep(0.005)
-            res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
-            print(f"res={res}")
+        # print(f"res={res},destination={destination}")
+        # while(res[0] and res[1]["state"]==False):
+        #     time.sleep(0.005)
+        #     res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
+        #     print(f"res={res}")
 
 
         if res[0] and res[1]["state"] and (destination == None):
