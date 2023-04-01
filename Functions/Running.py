@@ -4,6 +4,7 @@ import sys
 import time
 import threading
 import QRcodeIdentify
+import demotest
 import Functions.RemoteControl as RemoteControl
 
 
@@ -13,8 +14,9 @@ cam = None
 
 FUNCTIONS = {
     1: RemoteControl,
-    2:QRcodeIdentify,    # 启动二维码识别货物
-    3: None,    # 
+    2: QRcodeIdentify,    # 启动二维码识别货物
+    3: demotest,    # 
+    4: None,
 }
 
 def doHeartbeat(tmp=()):

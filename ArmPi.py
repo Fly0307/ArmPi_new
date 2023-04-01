@@ -10,6 +10,7 @@ import logging
 import threading
 import RPCServer
 import MjpgServer
+import demotest
 import numpy as np
 import HiwonderSDK.Board as Board
 import Functions.Running as Running
@@ -32,16 +33,16 @@ def startArmPi():
     threading.Thread(target=RPCServer.startRPCServer,
                      daemon=True).start()  # rpc服务器
     cam = Camera.Camera()  # 相机读取
-    Running.cam = cam
-
+    # Running.cam = cam
     while True:
         time.sleep(0.01)
         # 执行需要在本线程中执行的RPC命令
+
         while True:
             try:
                 req, ret = QUEUE_RPC.get(False)
                 # print("request=")
-                # print(req)
+                print(req)
                 event, params, *_ = ret
                 ret[2] = req(params)  # 执行RPC命令
                 event.set()
@@ -50,10 +51,10 @@ def startArmPi():
         #####
         # # 执行功能程序：二维码识别
         try:
-            if Running.RunningFunc > 0 and Running.RunningFunc <= 9:
+            if True:
                 if cam.frame is not None:
                     frame = cam.frame.copy()
-                    img = Running.CurrentEXE().run(frame)
+                    img = demotest.run(frame)
                     # if Running.RunningFunc == 9:
                     #     MjpgServer.img_show = np.vstack((img, frame))
                     # else:                       

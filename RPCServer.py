@@ -10,6 +10,7 @@ import jsonrpc
 from werkzeug.serving import run_simple
 from werkzeug.wrappers import Request, Response
 import QRcodeIdentify
+import demotest
 import threading
 import logging
 import time
@@ -188,7 +189,7 @@ def runbymainth(req, pas):
         while ret[2] is None:
             time.sleep(0.01)
             count += 1
-            if count > 200:
+            if count > 1000:
                 break
         if ret[2] is not None:
             if ret[2][0]:
@@ -243,6 +244,10 @@ def CargoPlacement(*target_pos):
     print('CargoPlacement(*target_pos)')
     return runbymainth(QRcodeIdentify.setTarget, target_pos)
 
+@dispatcher.add_method
+def set_order_adress(*target_pos):
+    print(f"set_order_adress={target_pos}")
+    return runbymainth(demotest.set_order_adress, target_pos)
 
 @Request.application
 def application(request):
