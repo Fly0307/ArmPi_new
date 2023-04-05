@@ -241,7 +241,7 @@ def move():
         if destination == None:
             time.sleep(0.01)
             continue
-        res = Update_state(ArmPi_id)
+        res = Update_state([ArmPi_id,cur_orderid])
         print(f"update state success")
         while get_it and cur_orderid is not None:
             # 删除订单信息
@@ -254,7 +254,7 @@ def move():
    
                 print(f"destination={destination}")
                 result = AK.setPitchRangeMoving(
-                    (coordinate[destination][0], coordinate[destination][1], 12),
+                    (coordinate[destination][0], coordinate[destination][1], 10),
                     -90,
                     -90,
                     0,
@@ -269,7 +269,7 @@ def move():
                     (
                         coordinate[destination][0],
                         coordinate[destination][1],
-                        coordinate[destination][2] + count[destination]*3,
+                        coordinate[destination][2] + count[destination]*2.5,
                     ),
                     -90,
                     -90,
