@@ -269,7 +269,7 @@ def move():
                     (
                         coordinate[destination][0],
                         coordinate[destination][1],
-                        coordinate[destination][2] + count[destination],
+                        coordinate[destination][2] + count[destination]*3,
                     ),
                     -90,
                     -90,
