@@ -38,7 +38,7 @@ size = (640, 480)  # 设置采集图片(流)大小
 # 夹持器夹取时闭合的角度
 servo1 = 500
 
-ArmPi_id = 1
+ArmPi_id = 2
 destination = None
 cur_orderid = None
 _stop=False
@@ -171,6 +171,8 @@ def move():
                     initMove()
                     break
                 # setBuzzer(0.1)
+                if world_X ==None:
+                    continue
                 print("move to world_X=%d" % (world_X) + "and world_Y=%d" % (world_Y))
                 result = AK.setPitchRangeMoving(
                     (world_X, world_Y, 7), -90, -90, 0, 1500
@@ -308,6 +310,8 @@ def move():
                 time.sleep(result[2] / 1000)
                 destination = None
                 cur_orderid = None
+                world_X=None
+                world_Y=None
                 initMove()  # 回到初始位置
             else:
                 if _stop:
@@ -512,13 +516,9 @@ def run():
         order_lists=list(orderIDs)
         Send_orders(order_lists)
 
-        if cur_orderBlock !=None:
-            cur_orderid = cur_orderBlock[0]
-            world_X,world_Y=cur_orderBlock[1]
-            rotation_angle=cur_orderBlock[2]
-            print("world_X= %d" % (world_X) + " world_Y=%d" % (world_Y))
-        else:
-            print("world_X=None  world_Y=None" )
+        cur_orderid = cur_orderBlock[0]
+        world_X=None
+        world_Y=None
         
         res=Get_order([ArmPi_id,cur_orderid])
         if res[1]["state"]==False:
@@ -530,6 +530,9 @@ def run():
             destination=None
         else:
             destination=res[1]["des"]
+            world_X,world_Y=cur_orderBlock[1]
+            rotation_angle=cur_orderBlock[2]
+            print("world_X= %d" % (world_X) + " world_Y=%d" % (world_Y))
 
         print(f"destination={destination},cur_orderid={cur_orderid}")
         cur_orderBlock=None
