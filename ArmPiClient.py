@@ -5,13 +5,17 @@ import sys
 from RPCClient import *
 from Camera import *
 
+
 sys.path.append("/home/pi/ArmPi/")
-# sys.path.append('/home/pi/.local/lib/python3.7/site-packages')
+sys.path.append('/home/pi/.local/lib/python3.7/site-packages')
 from ArmIK.Transform import *
 from ArmIK.ArmMoveIK import *
 import HiwonderSDK.Board as Board
 from math import *
 import pyzbar.pyzbar as pyzbar
+import asyncio
+from aiohttp import ClientSession
+from jsonrpcclient import Ok, request, parse
 
 if sys.version_info.major == 2:
     print("Please run this program with python3!")
@@ -20,6 +24,7 @@ if sys.version_info.major == 2:
 # 调用机械臂控制函数
 AK = ArmIK()
 rpcclient = RPCClient("http://192.168.0.103:9030")
+URL="http://192.168.0.103:9030"
 # 放置位置,代表地址
 # 坐标以机械臂底座舵机为中心
 coordinate = {
@@ -33,9 +38,10 @@ size = (640, 480)  # 设置采集图片(流)大小
 # 夹持器夹取时闭合的角度
 servo1 = 500
 
-ArmPi_id = 2
+ArmPi_id = 1
 destination = None
 cur_orderid = None
+_stop=False
 # 放置高度计数
 count = {
     "成都": 0,
@@ -72,6 +78,50 @@ def delete_order(orderid):
     else:
         print("Order not found.")
 
+# 用于异步调用
+async def call_async_rpc(url, method, *params):
+    async with ClientSession() as session:
+        async with session.post(url, json=request(method, *params)) as response:
+            parsed = parse(await response.json())
+            print(f"parsed={parsed}")
+            if isinstance(parsed, Ok):
+                return parsed.result
+            else:
+                logging.error(parsed.message)
+                return None
+
+async def get_order_adress(ArmPi_id):
+    res = await call_async_rpc(URL,"Get_Address", [ArmPi_id])
+    return res
+
+def Get_order(ArmPi_id):
+    loop=asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    ret=loop.run_until_complete(get_order_adress(ArmPi_id))
+    loop.close()
+    return ret
+
+async def update_state(ArmPi_id):
+    res = await call_async_rpc(URL,"Update_state", [ArmPi_id])
+    return res
+
+def Update_state(ArmPi_id):
+    loop=asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    ret=loop.run_until_complete(update_state(ArmPi_id))
+    loop.close()
+    return ret
+
+async def send_orders(orderID_list):
+    res = await call_async_rpc(URL,"Add_OrderIDs", [orderID_list])
+    return res
+
+def Send_orders(orderID_list):
+    loop=asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    ret=loop.run_until_complete(send_orders(orderID_list))
+    loop.close()
+    return ret
 
 
 def initMove():
@@ -80,16 +130,6 @@ def initMove():
     Board.setBusServoPulse(1, servo1 - 50, 300)
     Board.setBusServoPulse(2, 500, 500)
     AK.setPitchRangeMoving((0, 10, 10), -30, -30, -90, 1000)
-
-
-def setBuzzer(timer):
-    """
-    蜂鸣器提示
-    """
-    Board.setBuzzer(0)
-    Board.setBuzzer(1)
-    time.sleep(timer)
-    Board.setBuzzer(0)
 
 
 def move():
@@ -101,8 +141,6 @@ def move():
     global rpcclient
     global count
     global cur_orderid
-    # global start_pick_up
-    # global start_pick_down
     global pick_up
     global rotation_angle
     global world_X, world_Y
@@ -201,17 +239,17 @@ def move():
         if destination == None:
             time.sleep(0.01)
             continue
-        res = rpcclient.call("Update_state", ArmPi_id)
+        res = Update_state(ArmPi_id)
+        print(f"update state success")
         while get_it and cur_orderid is not None:
             # 删除订单信息
-            orderIDs.remove(cur_orderid)
+            if cur_orderid in orderIDs:
+                orderIDs.remove(cur_orderid)
             delete_order(cur_orderid)
             if destination is not None:
                 print("机械臂开始放下 detect_block=%s" % destination)
                 pick_up = False
-                # start_pick_up = False
-                # if not __isRunning:
-                #     continue
+   
                 print(f"destination={destination}")
                 result = AK.setPitchRangeMoving(
                     (coordinate[destination][0], coordinate[destination][1], 12),
@@ -254,7 +292,6 @@ def move():
                 #     continue
                 Board.setBusServoPulse(1, servo1 - 200, 300)  # 爪子张开  ，放下物体
                 time.sleep(0.3)
-                put_it = True
                 n = count[destination]
                 count[destination] = n + 1
                 print("num %s" % destination + "=%d" % (n + 1))
@@ -270,15 +307,9 @@ def move():
                 )
                 time.sleep(result[2] / 1000)
                 destination = None
-                # get_roi = False
-                # start_pick_up = False
-                # start_pick_down = False
-                # orderIDs.remove(cur_orderid)
-                # delete_order(cur_orderid)
                 cur_orderid = None
                 initMove()  # 回到初始位置
             else:
-                put_it = False
                 if _stop:
                     _stop = False
                     Board.setBusServoPulse(1, servo1 - 70, 300)
@@ -289,7 +320,6 @@ def move():
                 time.sleep(0.01)
             endTime = time.perf_counter()
             print(f"开始抓取到完成用时:{(endTime-startTime)*1000}ms")
-            res = rpcclient.call("Update_state", ArmPi_id)
             print(res)
 
 
@@ -323,6 +353,8 @@ def decodeAllQR(image):
     """
     global orderblocks
     global orderIDs
+    orderblocks.clear()
+    orderIDs.clear()
     barcodes = pyzbar.decode(image)
     num = len(barcodes)
     closest_block=None
@@ -456,20 +488,13 @@ def run():
                 break
             else:
                 continue
+        if cur_orderid !=None and destination !=None :
+            time.sleep(0.1)
+            continue
 
-        # if cur_orderid is not None:
-        #     time.sleep(0.5)
-        #     if destination==None:
-        #         res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
-        #         if res[0] and res[1]["state"]:
-        #             destination = res[1]["des"]
-        #             cur_orderid = None
-        #     continue
-
-        
         strat_time = time.perf_counter()
         # 优先从orderblocks中读取方块信息
-        if len(orderblocks):
+        if len(orderblocks)>0:
             cur_orderBlock=get_orderblock_fromSet()
             if cur_orderBlock[0]==None:
                 time.sleep(1)
@@ -485,21 +510,7 @@ def run():
         en_time = time.perf_counter()
         print(f"识别更新画面中所有二维码花费时间{(en_time-strat_time)*1000}ms")
         order_lists=list(orderIDs)
-        res = rpcclient.call("Add_OrderIDs", [order_lists])  # 发送订单号准备查询
-
-        # # 计算出二维码（方块）的位置
-        # if rect is not None:
-        #     if box is not None:
-        #         # 获取方块的现实世界坐标
-        #         roi = getROI(box)  # 获取极值点
-        #         img_centerx, img_centery = getCenter(
-        #             rect, roi, size, square_length
-        #         )  # 获取木块中心坐标
-        #         rotation_angle = rect[2]
-        #         world_X, world_Y = convertCoordinate(
-        #             img_centerx, img_centery, size
-        #         )  # 转换为现实世界坐标
-        #         print("world_X= %d" % (world_X) + " world_Y=%d" % (world_Y))
+        Send_orders(order_lists)
 
         if cur_orderBlock !=None:
             cur_orderid = cur_orderBlock[0]
@@ -508,36 +519,23 @@ def run():
             print("world_X= %d" % (world_X) + " world_Y=%d" % (world_Y))
         else:
             print("world_X=None  world_Y=None" )
-
-        # 获取订单地址,5次超时
-        res=None
-        cnt=0
-        # if res==None:
-            # res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
-            # cnt+=1
-            # if cnt>5:
-            #     break
         
-        # print(f"res={res},destination={destination}")
-        # while(res[0] and res[1]["state"]==False):
-        #     time.sleep(0.005)
-        #     res = rpcclient.call("Get_Adress", [[ArmPi_id, cur_orderid]])
-        #     print(f"res={res}")
-
-
-        if res[0] and res[1]["state"] and (destination == None):
-            destination = res[1]["des"]
-            if(destination==None):
-                del orderblocks[cur_orderid]
+        res=Get_order([ArmPi_id,cur_orderid])
+        if res[1]["state"]==False:
+            # 订单地址不存在，已经被抓取
+            delete_order(cur_orderid)
+            if cur_orderid in orderIDs:
                 orderIDs.remove(cur_orderid)
-                cur_orderid=None
-            # cur_orderid = None
-            print(f"destination={destination},cur_orderid={cur_orderid}")
-            cv2.imshow("img", img)
-            continue
+            cur_orderid=None
+            destination=None
         else:
-            cv2.imshow("img", img)
-            time.sleep(1)
+            destination=res[1]["des"]
+
+        print(f"destination={destination},cur_orderid={cur_orderid}")
+        cur_orderBlock=None
+        cv2.imshow("img", img)
+        continue
+
     print("over*******************")
     my_camera.camera_close()
     cv2.destroyAllWindows()
